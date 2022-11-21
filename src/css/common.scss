@@ -11,7 +11,6 @@ body{
     margin: 0 auto;
 }
 .btn{
-    padding: 13px 21px;
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 16px;
@@ -19,15 +18,90 @@ body{
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    height: 43px;
 
     &--gray{
-        color: $bgGreyColor;
+        background: $bgGreyColor;
     }
     &--orange{
-        color: $primaryColor;
+        background: $primaryColor;
+    }
+    span {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        &::after,
+        &::before{
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            background: $primaryColor;
+            box-shadow:
+            -7px -7px 20px 0px rgba(255,255,255,.9),
+            -4px -4px 5px 0px rgba(255,255,255,.9),
+            7px 7px 20px 0px rgba(0,0,0,.2),
+            4px 4px 5px 0px rgba(0,0,0,.3);
+            transition: all 0.3s ease;
+        }
+
+        &:before {
+            width: 2px;
+            height: 0%;
+        }
+        &:after {
+            height: 2px;
+            width: 0%;
+        }
+    }
+    &:before,
+    &:after {
+        position: absolute;
+        content: "";
+        right: 0;
+        bottom: 0;
+        background: $primaryColor;
+        box-shadow:
+         -7px -7px 20px 0px rgba(255,255,255,.9),
+         -4px -4px 5px 0px rgba(255,255,255,.9),
+         7px 7px 20px 0px rgba(0,0,0,.2),
+         4px 4px 5px 0px rgba(0,0,0,.3);
+        transition: all 0.3s ease;
+    }
+    &:before{
+        height: 0%;
+        width: 2px;
+    }
+    &:after {
+        width: 0%;
+        height: 2px;
+      }
+    &:hover{
+        background: transparent;
+    }
+    &:hover:before {
+        height: 100%;
+    }
+    &:hover:after {
+        width: 100%;
+    }
+    &:hover span:before {
+        height: 100%;
+    }
+    &:hover span:after {
+        width: 100%;
     }
 }
+
 .main-menu{
+    font-family: 'Raleway';
     padding-left: 0;
     display: flex;
     align-items: center;
@@ -39,6 +113,10 @@ body{
         &:last-child{
             padding-right: 0;
         }
+
+        &:nth-child(3n){
+            padding-right: calc(60px*2 + 200px);
+        }
     }
     &__link{
         font-weight: 600;
@@ -47,5 +125,53 @@ body{
         text-transform: uppercase;
         color: $secondaryColor;
         text-decoration: none
+    }
+}
+
+.lang-block{
+    font-family: 'Raleway';
+    padding-right: 20px;
+    position: relative;
+    cursor: pointer;
+
+    &::after{
+        content: '';
+        position: absolute;
+        background: url(../img/arrow-lang.svg);
+        width: 13px;
+        height: 9px;
+        right: 0;
+        top: 5px;    
+    }
+    
+    &__field{
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 150%;
+        color: rgba(52, 52, 52, 0.7);
+    }
+}
+
+.h1{
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 110%;
+    text-transform: capitalize;
+    color: #fff;
+
+    &::first-letter{
+        color: $primaryColor;
+    }
+}
+
+.slider-pag{
+    .swiper-pagination-bullet{
+        background: #F2F3F5;
+        width: 13px;
+        height: 13px;
+    }
+    .swiper-pagination-bullet-active{
+        background: $primaryColor;
     }
 }

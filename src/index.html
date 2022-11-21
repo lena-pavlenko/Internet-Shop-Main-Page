@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/style.css">
     <title>Главная</title>
 </head>
@@ -31,7 +35,7 @@
                     <img src="img/logo.png" alt="" srcset="img/logo-2x.png 2x">
                 </a>
                 <div class="header__info">
-                    <a href="tel:+79856543221" class="phone-link">+7(985)654-32-21</a>
+                    <a href="tel:+79856543221" class="header__phone-link phone-link">+7(985)654-32-21</a>
                     <div class="lang-block">
                         <div class="lang-block__field">RU</div>
                     </div>
@@ -40,6 +44,56 @@
             </div>
         </div>
     </header>
+    <main class="main">
+        <section class="main-banner">
+            <div class="container">
+                <div class="main-banner__top-text">Основано в 1993 году</div>
+                <div class="main-banner__flex">
+                    <div class="main-banner__info">
+                        <h1 class="h1 main-banner__h1">ЛУЧШАЯ ЖИЗНЬ, СОЗДАННАЯ ДЛЯ ВАС!</h1>
+                        <a href="#" class="btn btn--orange main-banner__btn">
+                            <span>перейти в КАталог</span>
+                        </a>
+                    </div>
+                    <div class="main-banner__slider">
+                        <div class="main-slider swiper">
+                            <div class="swiper-wrapper main-slider__swiper-wrapper">
+                                <div class="swiper-slide main-slider__item">
+                                    <img src="img/slide1.jpg" alt="" srcset="img/slide1_2x.jpg 2x">
+                                </div>
+                                <div class="swiper-slide main-slider__item">
+                                    <img src="img/slide1.jpg" alt="" srcset="img/slide1_2x.jpg 2x">
+                                </div>
+                                <div class="swiper-slide main-slider__item">
+                                    <img src="img/slide1.jpg" alt="" srcset="img/slide1_2x.jpg 2x">
+                                </div>
+                                <div class="swiper-slide main-slider__item">
+                                    <img src="img/slide1.jpg" alt="" srcset="img/slide1_2x.jpg 2x">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination slider-pag main-slider__slider-pag"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Каталог -->
+        <section class="catalog">
+            <div class="container">
+                <h2 class="h2 catalog__h2">Новинки</h2>
+                <div class="catalog__slider">
+                    <div class="swiper catalog-slider">
+                        <div class="catalog-slider__swiper-wrapepr swiper-wrapper">
+                            <div class="swiper-slide catalog-slider__item">
+                                <a href="#" class="good-item catalog__good-item"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,3 +1,32 @@
-header{
+.header{
     padding: 25px 0;
+
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__info{
+        display: flex;
+    }
+
+    &__logo{
+        position: absolute;
+        left: 44%;
+        top: 20px;
+    }
+
+    &__phone-link{
+        margin-right: 60px;
+    }
+}
+
+.phone-link{
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: $secondaryColor;
 }
