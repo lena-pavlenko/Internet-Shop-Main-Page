@@ -1,0 +1,59 @@
+.main-banner{
+    background: #CCB2A3;
+    padding: 35px 0 0;
+    height: 590px;
+
+    &__top-text{
+        font-family: 'Raleway';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 127.5%;
+        color: #FFFFFF;
+        text-align: right;
+    }
+
+    &__flex{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 35px;
+    }
+
+    &__info{
+        padding-top: 79px;
+        max-width: 270px;
+    }
+
+    &__btn{
+        width: 209px;
+
+        &:hover{
+            color: #fff;
+        }
+    }
+
+    &__h1{
+        margin-bottom: 60px;
+    }
+
+    &__slider{
+        position: relative;
+    }
+}
+
+.main-slider{
+    width: 870px;
+
+    &__item{
+        height: 617px;
+        width: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__slider-pag.swiper-pagination-bullets{
+        bottom: -40px;
+    }
+}
