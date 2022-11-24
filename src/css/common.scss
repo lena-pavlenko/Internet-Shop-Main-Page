@@ -4,7 +4,7 @@
 body{
     padding: 0;
     margin: 0;
-    font-family: 'Railway';
+    font-family: 'Raleway';
 }
 .container{
     max-width: 1170px;
@@ -153,12 +153,20 @@ body{
 }
 
 .h1{
-    font-family: 'Raleway';
     font-weight: 600;
     font-size: 42px;
     line-height: 110%;
     text-transform: capitalize;
     color: #fff;
+
+    &::first-letter{
+        color: $primaryColor;
+    }
+}
+.h2{
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 110%;
 
     &::first-letter{
         color: $primaryColor;
@@ -173,5 +181,23 @@ body{
     }
     .swiper-pagination-bullet-active{
         background: $primaryColor;
+    }
+}
+.slider-btn{
+    background: url(../img/arrow-slider.svg);
+    width: 19px;
+    height: 31px;
+    background-repeat: no-repeat;
+    &--prev{
+        transform: rotate(-180deg);
+        &::after{
+            content: '';
+        }
+    }
+
+    &--next{
+        &::after{
+            content: '';
+        }
     }
 }
