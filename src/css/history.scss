@@ -1,0 +1,54 @@
+.history{
+    padding-top: 86px;
+    padding-bottom: 80px;
+
+    &__h2{
+        margin-bottom: 14px;
+    }
+
+    &__flex{
+        position: relative;
+        display: flex;
+    }
+
+    &__info{
+        background: $bgGreyColor;
+        color: #FFFFFF;
+        width: 538px;
+        padding: 50px 41px;
+        height: fit-content;
+        position: absolute;
+        top: 66px;
+        left: 0;
+
+        &::after{
+            content: '';
+            background: #FF9619;
+            width: 101px;
+            height: 55px;
+            position: absolute;
+            right: 69px;
+            bottom: -28px;
+        }
+    }
+
+    &__subtitle{
+        margin-bottom: 25px;
+    }
+
+    &__image{
+        width: 800px;
+        height: 543px;
+        margin-left: auto;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__history-line{
+        padding-top: 80px;
+    }
+}

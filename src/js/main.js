@@ -18,4 +18,12 @@ window.onload = function() {
       prevEl: '.catalog-slider__slider-btn--prev',
     },
   });
+  const recentSlider = new Swiper('.recent-slider', {
+    slidesPerView: 4,
+    spaceBetween: 7,
+    navigation: {
+      nextEl: '.recent__slider-btn--next',
+      prevEl: '.recent__slider-btn--prev',
+    },
+  });
 }

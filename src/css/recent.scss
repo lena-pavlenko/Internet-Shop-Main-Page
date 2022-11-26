@@ -1,0 +1,16 @@
+.recent{
+    padding-top: 80px;
+
+    &__slider{
+        position: relative;
+        padding: 0 36px;
+    }
+    
+    &__slider-btn--prev{
+        left: 0;
+    }
+
+    &__slider-btn--next{
+        right: 0;
+    }
+}

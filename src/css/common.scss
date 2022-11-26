@@ -201,3 +201,166 @@ body{
         }
     }
 }
+
+.subtitle{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: 0.1em;
+}
+
+.text{
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 135%;
+    letter-spacing: 0.1em;
+}
+
+.history-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__point{
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 127.5%;
+        color: $secondaryColor;
+    }
+
+    &__now{
+        font-weight: 600;
+        font-size: 144px;
+        line-height: 150%;
+        color: rgba(52, 52, 52, 0.1);
+    }
+}
+
+.form-block{
+    background: #fff;
+    padding: 31px 49px 17px;
+    position: relative;
+
+    &::before{
+        content: 'O';
+        position: absolute;
+        color: $primaryColor;
+        font-weight: 800;
+        font-size: 160px;
+        line-height: 110%;
+        left: -76px;
+        top: -50px;
+    }
+
+    &__uptitle{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: $primaryColor;
+    }
+
+    &__title{
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 33px;
+        text-transform: uppercase;
+        color: $secondaryColor;
+        margin: 15px 0 20px;
+    }
+
+    &__inputs{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input{
+        margin-bottom: 25px;
+    }
+
+    &__check-block{
+        margin-bottom: 29px;
+    }
+
+    &__btn{
+        border: none;
+        width: 209px;
+        padding: 0;
+        cursor: pointer;
+        margin: 0 auto;
+
+        &:hover{
+            color: $primaryColor;
+        }
+    }
+}
+
+.input{
+    font-family: 'Raleway';
+    border: none;
+    border-bottom: 1px solid #D1D1D1;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $secondaryColor;
+    outline: none;
+    padding-bottom: 5px;
+
+    &::placeholder{
+        color: rgba(52, 52, 52, 0.4);
+    }
+
+    &--mess{
+        resize: none;
+        height: 23px;
+        padding: 0;
+    }
+}
+
+.check-block{
+    &__label{
+        position: relative;
+        padding-left: 30px;
+        cursor: pointer;
+
+        &::before{
+            content: '';
+            border: 1px solid #D1D1D1;
+            width: 20px;
+            height: 20px;
+            left: 0;
+            position: absolute;
+        }
+    }
+
+    &__input{
+        position: absolute;
+        left: 0;
+        opacity: 0;
+
+        &:checked + span::before{
+            opacity: 1;
+        }
+    }
+
+    &__text{
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 13px;
+        color: rgba(52, 52, 52, 0.4);
+        display: inline-block;
+        width: 219px;
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            background: url(../img/checkmark-ic.svg) no-repeat;
+            width: 23px;
+            height: 17px;
+            left: -27px;
+            top: 3px;
+            opacity: 0;
+            transition: ease .3s;
+        }
+    }
+}
