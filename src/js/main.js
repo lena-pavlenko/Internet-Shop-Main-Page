@@ -18,6 +18,7 @@ window.onload = function() {
       prevEl: '.catalog-slider__slider-btn--prev',
     },
   });
+
   const recentSlider = new Swiper('.recent-slider', {
     slidesPerView: 4,
     spaceBetween: 7,
@@ -26,4 +27,18 @@ window.onload = function() {
       prevEl: '.recent__slider-btn--prev',
     },
   });
+
+  const partnerSlider = new Swiper('.partner-slider', {
+    slidesPerView: 'auto',
+  });
+
+  if (screen.width < 576) {
+    const singleGoodsSlider = new Swiper('.single-goods-slider', {
+        slidesPerView: 1,
+        pagination: {
+            el: '.single-goods__slider-pag',
+        },
+    });
+  }
+  
 }

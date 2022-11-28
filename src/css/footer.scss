@@ -1,0 +1,76 @@
+.footer{
+    background: $bgGreyColor;
+    padding: 77px 0 29px;
+    position: relative;
+    color: #fff;
+
+    &::after{
+        content: '';
+        position: absolute;
+        background: url(../img/ekmi-logo.svg) no-repeat;
+        width: 364px;
+        height: 96px;
+        right: 0;
+        top: -95px;
+    }
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        max-width: 170px;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__menu{
+        column-count: 2;
+        column-gap: 97px;
+        padding: 0;
+
+        &-item{
+            padding-bottom: 25px;
+            list-style: none;
+            max-width: fit-content;
+
+            &:last-child{
+                padding-bottom: 0;
+            }
+        }
+
+        &-link{
+            color: #fff;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 150%;
+            letter-spacing: 0.16em;
+            text-transform: capitalize;
+            text-decoration: none;
+            transition: color ease .4s;
+
+            &:hover{
+                color: $primaryColor;
+            }
+        }
+    }
+
+    &__single-phone{
+        display: block;
+        margin: 32px 0;
+    }
+
+    &__bottom{
+        text-align: center;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: 0.16em;
+        text-transform: capitalize;
+        padding-top: 80px;
+    }
+}
