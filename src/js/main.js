@@ -41,4 +41,27 @@ window.onload = function() {
     });
   }
   
+  const langSwitch = () => {
+    const container = document.querySelector('.lang-block');
+    const dropMenu = container.querySelector('.lang-block__drop');
+    const items = container.querySelectorAll('.lang-block__drop-item');
+
+    container.addEventListener('click', e => {
+        dropMenu.classList.toggle('open');
+        if (e.target.closest('.lang-block__drop-item')) {
+            const current = e.target.closest('.lang-block__drop-item');
+            items.forEach(item => {
+                if (item == current) {
+                    item.classList.add('active');
+                    const value = item.querySelector('input').value;
+                    dropMenu.previousElementSibling.innerHTML = value;
+                } else {
+                    item.classList.remove('active')
+                }
+            })
+        }
+    });
+  }
+
+  langSwitch();
 }
