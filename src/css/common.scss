@@ -9,6 +9,26 @@ body{
 .container{
     max-width: 1170px;
     margin: 0 auto;
+
+    @media(max-width:1199px){
+        max-width: 960px;
+    }
+
+    @media(max-width:991px){
+        max-width: 768px;
+    }
+}
+
+.logo{
+    max-width: 216px;
+
+    img{
+        max-width: 100%;
+    }
+
+    @media(max-width: 1199px){
+        max-width: 190px;
+    }
 }
 .btn{
     font-family: 'Raleway';
@@ -129,12 +149,23 @@ body{
         list-style: none;
         position: relative;
 
+        @media(max-width:1199px){
+            padding-right: 30px;
+        }
+
         &:last-child{
             padding-right: 0;
         }
 
         &:nth-child(3n){
             padding-right: calc(60px*2 + 200px);
+
+            @media(max-width:1199px){
+                padding-right: calc(30px*2 + 200px);
+            }
+            @media(max-width: 991px){
+                padding-right: 30px;
+            }
         }
 
         &:hover .submenu{
@@ -148,6 +179,10 @@ body{
         text-transform: uppercase;
         color: $secondaryColor;
         text-decoration: none
+    }
+
+    @media(max-width:991px){
+        margin: 0;
     }
 }
 
@@ -345,6 +380,10 @@ body{
         line-height: 110%;
         left: -76px;
         top: -50px;
+
+        @media(max-width:991px){
+            left: -98px;
+        }
     }
 
     &__uptitle{
@@ -386,6 +425,10 @@ body{
         &:hover{
             color: $primaryColor;
         }
+    }
+
+    @media(max-width:991px){
+        padding: 31px 23px 17px;
     }
 }
 

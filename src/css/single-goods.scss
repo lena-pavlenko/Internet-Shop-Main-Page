@@ -1,5 +1,17 @@
 .single-goods{
     padding: 80px 0 256px;
+
+    &__slider{
+        position: relative;
+
+        &-pag.swiper-pagination-bullets{
+            bottom: -41px;
+        }
+    }
+
+    @media(max-width: 991px){
+        padding: 50px 0 188px;
+    }
 }
 .single-goods-slider{
 
@@ -9,6 +21,10 @@
         position: relative;
         margin-right: 30px;
 
+        @media(max-width: 991px){
+            margin-right: 0;
+        }
+        
         &:last-child{
             margin-right: 0;
         }

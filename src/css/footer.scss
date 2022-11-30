@@ -33,6 +33,10 @@
         column-gap: 97px;
         padding: 0;
 
+        @media(max-width: 991px){
+            column-gap: 22px;
+        }
+
         &-item{
             padding-bottom: 25px;
             list-style: none;

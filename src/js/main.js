@@ -11,12 +11,24 @@ window.onload = function() {
   });
 
   const catalogSlider = new Swiper('.catalog-slider', {
-    slidesPerView: 3,
-    spaceBetween: 80,
     navigation: {
       nextEl: '.catalog-slider__slider-btn--next',
       prevEl: '.catalog-slider__slider-btn--prev',
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 80,
+      },
+    }
   });
 
   const recentSlider = new Swiper('.recent-slider', {
@@ -26,15 +38,27 @@ window.onload = function() {
       nextEl: '.recent__slider-btn--next',
       prevEl: '.recent__slider-btn--prev',
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 4,
+      },
+    }
   });
 
   const partnerSlider = new Swiper('.partner-slider', {
     slidesPerView: 'auto',
   });
 
-  if (screen.width < 576) {
+  if (screen.width < 1199) {
     const singleGoodsSlider = new Swiper('.single-goods-slider', {
-        slidesPerView: 1,
+        slidesPerView: 3,
+        spaceBetween: 30,
         pagination: {
             el: '.single-goods__slider-pag',
         },

@@ -6,11 +6,19 @@
         display: flex;
         padding-right: 102px;
         position: relative;
+
+        @media(max-width: 1199px){
+            padding: 0;
+        }
     }
 
     &__image{
         width: 670px;
         height: 480px;
+
+        @media(max-width: 991px){
+            width: 430px;
+        }
 
         img{
             width: 100%;
@@ -24,5 +32,16 @@
         position: absolute;
         right: 102px;
         top: 32px;
+
+        @media(max-width: 1199px){
+            right: 0;
+        }
+        @media(max-width: 991px){
+            width: 390px;
+        }
+    }
+
+    @media(max-width: 991px){
+        margin-top: 50px;
     }
 }

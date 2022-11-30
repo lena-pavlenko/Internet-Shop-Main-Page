@@ -21,6 +21,10 @@
         top: 66px;
         left: 0;
 
+        @media(max-width:1199px){
+            top: 19px;
+        }
+
         &::after{
             content: '';
             background: #FF9619;
@@ -50,5 +54,13 @@
 
     &__history-line{
         padding-top: 80px;
+
+        @media(max-width:1199px){
+            padding-top: 40px;
+        }
+    }
+
+    @media(max-width:991px){
+        padding: 50px 0;
     }
 }

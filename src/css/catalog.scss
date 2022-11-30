@@ -8,6 +8,10 @@
 
     &__slider{
         position: relative;
+
+        @media(max-width: 991px){
+            padding: 0 30px;
+        }
     }
 
     &__btn{
@@ -18,6 +22,14 @@
             color: $primaryColor;
         }
     }
+
+    @media(max-width:1199px){
+        padding-top: 200px;
+    }
+    @media(max-width:991px){
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 }
 .catalog-slider{
     padding: 0 69px;
@@ -26,17 +38,34 @@
         width: 254px;
         transition: ease .3s;
 
-        &:hover .good-item__image{
-            max-height: 337px;
+        @media(min-width:992px) {
+            &:hover .good-item__image{
+                max-height: 337px;
+            }
         }
+        
     }
 
     &__slider-btn--next{
         right: 22px;
+
+        @media(max-width:991px){
+            right: 0px;
+            top: 40%;
+        }
     }
 
     &__slider-btn--prev{
         left: 22px;
+
+        @media(max-width:991px){
+            left: 0px;
+            top: 40%;
+        }
+    }
+
+    @media(max-width:991px){
+        padding: 0;
     }
 }
 .good-item{
@@ -49,6 +78,10 @@
         width: 100%;
         max-height: 278px;
         height: 100vh;
+
+        @media(max-width:1199px){
+            max-height: 248px;
+        }
 
         img{
             object-fit: scale-down;
