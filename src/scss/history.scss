@@ -4,11 +4,16 @@
 
     &__h2{
         margin-bottom: 14px;
+        margin-top: 0;
     }
 
     &__flex{
         position: relative;
         display: flex;
+
+        @media(max-width:768px){
+            flex-direction: column;
+        }
     }
 
     &__info{
@@ -24,6 +29,9 @@
         @media(max-width:1199px){
             top: 19px;
         }
+        @media(max-width:768px){
+            position: inherit;
+        }
 
         &::after{
             content: '';
@@ -33,6 +41,10 @@
             position: absolute;
             right: 69px;
             bottom: -28px;
+
+            @media(max-width:768px){
+                z-index: 4;
+            }
         }
     }
 
@@ -44,6 +56,12 @@
         width: 800px;
         height: 543px;
         margin-left: auto;
+        height: 400px;
+        z-index: 3;
+
+        @media(max-width:768px){
+            width: 100%;
+        }
 
         img{
             width: 100%;
@@ -63,4 +81,5 @@
     @media(max-width:991px){
         padding: 50px 0;
     }
+    
 }

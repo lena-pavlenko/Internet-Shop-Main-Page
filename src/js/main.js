@@ -1,5 +1,6 @@
 window.onload = function() {
 
+  // Баннер
   const mainSlider = new Swiper('.main-slider', {
     slidesPerView: 1,
     autoplay: true,
@@ -10,6 +11,7 @@ window.onload = function() {
     },
   });
 
+  // Каталог
   const catalogSlider = new Swiper('.catalog-slider', {
     navigation: {
       nextEl: '.catalog-slider__slider-btn--next',
@@ -31,6 +33,7 @@ window.onload = function() {
     }
   });
 
+  // Недавние товары
   const recentSlider = new Swiper('.recent-slider', {
     slidesPerView: 4,
     spaceBetween: 7,
@@ -51,6 +54,7 @@ window.onload = function() {
     }
   });
 
+  // Партнеры
   const partnerSlider = new Swiper('.partner-slider', {
     slidesPerView: 'auto',
   });
@@ -65,6 +69,7 @@ window.onload = function() {
     });
   }
   
+  // Переключение языков
   const langSwitch = () => {
     const container = document.querySelector('.lang-block');
     const dropMenu = container.querySelector('.lang-block__drop');
@@ -87,5 +92,24 @@ window.onload = function() {
     });
   }
 
+  // Мобильное меню
+  const mobMenu = () => {
+    const container = document.querySelector('.header__content');
+
+    if (container) {
+      const menu = container.querySelector('.header__nav');
+
+      container.addEventListener('click', (e) => {
+        if (e.target.closest('.mob-burger')) {
+          menu.classList.add('open');
+        }
+        if (e.target.closest('.menu-close')) {
+          menu.classList.remove('open');
+        }
+      })
+    }
+  }
+
   langSwitch();
+  mobMenu();
 }

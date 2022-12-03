@@ -12,6 +12,10 @@
     &__flex{
         display: flex;
         padding-bottom: 129px;
+
+        @media(max-width:768px){
+            flex-direction: column;
+        }
     }
 
     &__grey{
@@ -24,6 +28,12 @@
         @media(max-width: 991px){
             top: 156px;
         }
+        @media(max-width:768px){
+            width: 100%;
+            top: 156px;
+            position: inherit;
+            height: auto;
+        }
     }
 
     &__brown{
@@ -34,6 +44,11 @@
 
         @media(max-width: 991px){
             height: 377px;
+        }
+        @media(max-width:768px){
+            width: 84%;
+            position: relative;
+            height: auto;
         }
     }
 
@@ -91,6 +106,13 @@
         @media(max-width: 991px){
             top: 156px;
         }
+        @media(max-width:768px){
+            top: auto;
+            width: 100%;
+            left: auto;
+            position: initial;
+            transform: none;
+        }
     }
 
     &__info{
@@ -99,6 +121,9 @@
 
         @media(max-width: 991px){
             max-width: 310px;
+        }
+        @media(max-width:768px){
+            max-width: 100%;
         }
     }
 
@@ -110,7 +135,12 @@
         @media(max-width: 991px){
             margin-top: -54px;
         }
+        @media(max-width:768px){
+            margin-top: 0;
+        }
     }
+
+    
 }
 
 .partner-slider{

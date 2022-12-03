@@ -15,7 +15,10 @@ body{
     }
 
     @media(max-width:991px){
-        max-width: 768px;
+        max-width: 760px;
+    }
+    @media(max-width:768px){
+        max-width: 570px;
     }
 }
 
@@ -149,12 +152,12 @@ body{
         list-style: none;
         position: relative;
 
-        @media(max-width:1199px){
-            padding-right: 30px;
-        }
-
         &:last-child{
             padding-right: 0;
+
+            @media(max-width:768px) {
+                padding-bottom: 0;
+            }
         }
 
         &:nth-child(3n){
@@ -166,10 +169,21 @@ body{
             @media(max-width: 991px){
                 padding-right: 30px;
             }
+            @media(max-width:768px) {
+                padding-right: 0;
+            }
         }
 
         &:hover .submenu{
             display: block;
+        }
+
+        @media(max-width:1199px){
+            padding-right: 30px;
+        }
+        @media(max-width:768px) {
+            padding-right: 0;
+            padding-bottom: 25px;
         }
     }
     &__link{
@@ -178,7 +192,11 @@ body{
         line-height: 150%;
         text-transform: uppercase;
         color: $secondaryColor;
-        text-decoration: none
+        text-decoration: none;
+
+        @media(max-width:768px) {
+            font-weight: 400;
+        }
     }
 
     @media(max-width:991px){
@@ -195,6 +213,13 @@ body{
     top: auto;
     z-index: 10;
     display: none;
+
+    @media(max-width:768px) {
+        display: block;
+        position: initial;
+        box-shadow: none;
+        width: 100%;
+    }
     
     &__item{
         list-style: none;
@@ -208,6 +233,10 @@ body{
         &:hover a{
             color: #fff;
         }
+
+        @media(max-width:768px) {
+            padding: 0;
+        }
     }
 
     &__link{
@@ -216,6 +245,15 @@ body{
         color: $secondaryColor;
         text-decoration: none;
         transition: .4s;
+
+        @media(max-width:768px) {
+            padding-bottom: 15px;
+            display: block;
+
+            &:last-child{
+                padding-bottom: 0;
+            }
+        }
     }
 }
 
@@ -249,6 +287,7 @@ body{
         height: 0px;
         overflow: hidden;
         transition: height .4s ease-in-out;
+        z-index: 2;
 
         &.open{
             height: 66px;
@@ -541,4 +580,26 @@ body{
     text-transform: uppercase;
     color: #FFFFFF;
     text-decoration: none;
+}
+
+.mob-burger{
+    display: none;
+
+    @media(max-width:768px){
+        display: block;
+    }
+}
+.menu-close{
+    display: none;
+    background: url(../img/close-svg.svg) no-repeat;
+    width: 16px;
+    height: 15px;
+    background-size: contain;
+    border: none;
+    margin-left: auto;
+    margin-bottom: 21px;
+
+    @media(max-width:768px){
+        display: block;
+    }
 }

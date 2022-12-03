@@ -12,15 +12,30 @@
         height: 96px;
         right: 0;
         top: -95px;
+
+        @media(max-width:768px){
+            width: 245px;
+            right: 11px;
+            top: -64px;
+            background-size: contain;
+        }
     }
 
     &__content{
         display: flex;
         justify-content: space-between;
+
+        @media(max-width:768px){
+            flex-wrap: wrap;
+        }
     }
 
     &__logo{
         max-width: 170px;
+
+        @media(max-width:991px){
+            margin-right: 20px;
+        }
 
         img{
             width: 100%;
@@ -44,6 +59,10 @@
 
             &:last-child{
                 padding-bottom: 0;
+            }
+
+            @media(max-width:768px){
+                max-width: 155px;
             }
         }
 
