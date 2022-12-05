@@ -28,6 +28,10 @@
         @media(max-width:768px){
             flex-wrap: wrap;
         }
+        @media(max-width:575px){
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     &__logo{
@@ -35,6 +39,11 @@
 
         @media(max-width:991px){
             margin-right: 20px;
+        }
+        @media(max-width:575px){
+            margin-right: 0;
+            order: 3;
+            margin-top: 57px;
         }
 
         img{
@@ -50,6 +59,10 @@
 
         @media(max-width: 991px){
             column-gap: 22px;
+        }
+        @media(max-width:575px){
+            order: 1;
+            margin: 0;
         }
 
         &-item{
@@ -85,6 +98,27 @@
     &__single-phone{
         display: block;
         margin: 32px 0;
+
+        @media(max-width:575px){
+            display: inline-block;
+        }
+    }
+
+    &__social{
+        @media(max-width:575px){
+            display: inline-flex;
+            margin-right: 80px;
+        }
+    }
+
+    &__contacts{
+        @media(max-width:575px){
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            order: 2;
+        }
     }
 
     &__bottom{
@@ -95,5 +129,13 @@
         letter-spacing: 0.16em;
         text-transform: capitalize;
         padding-top: 80px;
+
+        @media(max-width:575px){
+            padding-top: 34px;
+        }
+    }
+
+    @media(max-width:575px){
+        padding: 63px 0 27px;
     }
 }

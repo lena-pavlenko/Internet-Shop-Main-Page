@@ -43,10 +43,18 @@
             position: initial;
             margin-top: -13px;
         }
+        @media(max-width:575px){
+            margin-top: 0;
+            max-width: 92px;
+        }
     }
 
     &__phone-link{
         margin-right: 60px;
+
+        @media(max-width:575px){
+            display: none;
+        }
     }
 
     &__nav{
@@ -71,6 +79,14 @@
             flex-direction: column;
             align-items: flex-start;
         }
+    }
+
+    &__mob-phone{
+        margin-right: 30px;
+    }
+
+    @media(max-width:575px){
+        padding: 15px 0;
     }
 }
 

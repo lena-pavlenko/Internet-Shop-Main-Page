@@ -17,6 +17,11 @@
             left: 50%;
             transform: translateX(-50%);
         }
+        @media(max-width:575px) {
+            bottom: 107px;
+            text-align: center;
+            width: 100%;
+        }
     }
 
     &__flex{
@@ -63,6 +68,9 @@
         @media(max-width:768px) {
             margin-bottom: 30px;
         }
+        @media(max-width:768px) {
+            max-width: 294px;
+        }
     }
 
     &__slider{
@@ -73,6 +81,9 @@
         }
         @media(max-width: 991px){
             margin-top: 0;
+        }
+        @media(max-width:575px){
+            margin: 0 -18px;
         }
     }
 

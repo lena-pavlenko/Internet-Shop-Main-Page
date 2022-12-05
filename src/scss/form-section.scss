@@ -50,6 +50,9 @@
             top: auto;
             right: auto;
         }
+        @media(max-width:575px){
+            width: 100%;
+        }
     }
 
     @media(max-width: 991px){
@@ -57,5 +60,8 @@
     }
     @media(max-width:768px){
         padding: 50px 0;
+    }
+    @media(max-width:575px){
+        padding: 56px 0;
     }
 }

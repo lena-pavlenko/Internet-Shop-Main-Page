@@ -57,6 +57,15 @@ window.onload = function() {
   // Партнеры
   const partnerSlider = new Swiper('.partner-slider', {
     slidesPerView: 'auto',
+    breakpoints: {
+      320: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      576: {
+        slidesPerView: 4,
+      },
+    }
   });
 
   if (screen.width < 1199) {
@@ -66,6 +75,15 @@ window.onload = function() {
         pagination: {
             el: '.single-goods__slider-pag',
         },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+          576: {
+            slidesPerView: 3,
+          },
+        }
     });
   }
   

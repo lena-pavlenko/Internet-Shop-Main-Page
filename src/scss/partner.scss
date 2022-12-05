@@ -1,12 +1,21 @@
 .partners{
     position: relative;
     padding-bottom: 80px;
+
     &__subtitle{
         margin-bottom: 25px;
+
+        @media(max-width:575px){
+            margin-bottom: 15px;
+        }
     }
 
     &__h2{
         margin-bottom: 80px;
+
+        @media(max-width:575px){
+            margin-bottom: 30px;
+        }
     }
 
     &__flex{
@@ -15,6 +24,9 @@
 
         @media(max-width:768px){
             flex-direction: column;
+        }
+        @media(max-width:575px){
+            padding-bottom: 47px;
         }
     }
 
@@ -34,6 +46,9 @@
             position: inherit;
             height: auto;
         }
+        @media(max-width:575px){
+            padding-bottom: 100px;
+        }
     }
 
     &__brown{
@@ -50,6 +65,9 @@
             position: relative;
             height: auto;
         }
+        @media(max-width:575px){
+            height: 200px;
+        }
     }
 
     &__image{
@@ -60,6 +78,12 @@
 
         @media(max-width: 991px){
             width: 450px;
+        }
+        @media(max-width:575px){
+            width: 100%;
+            position: relative;
+            height: auto;
+            margin-top: -90px;
         }
 
         &::before{
@@ -74,6 +98,16 @@
             @media(max-width: 991px){
                 left: 20px;
             }
+            @media(max-width:575px){
+                background: transparent;
+                width: 100%;
+                height: auto;
+                padding-top: 60%;
+                top: 0;
+                left: 0;
+                position: initial;
+                display: block;
+            }
         }
 
         &::after{
@@ -85,6 +119,10 @@
             bottom: -77px;
             right: 102px;
             z-index: 1;
+
+            @media(max-width:575px){
+                bottom: -19px;
+            }
         }
 
         img{
@@ -93,6 +131,11 @@
             object-fit: cover;
             position: relative;
             z-index: 2;
+
+            @media(max-width:575px){
+                position: absolute;
+                top: 0;
+            }
         }
     }
 
@@ -149,9 +192,19 @@
         margin-right: 80px;
         filter: drop-shadow(0px 4px 4px rgba(255, 150, 25, 0.15));
 
+        @media(max-width:575px){
+            margin-right: 0;
+        }
+
         img{
             width: 100%;
             height: auto;
+        }
+    }
+
+    &__swiper-wrapper{
+        @media(max-width:575px){
+            align-items: center;
         }
     }
 }

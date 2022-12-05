@@ -38,5 +38,13 @@
         left: -39px;
         top: -44px;
         font-family: 'Poppins';
+
+        @media(max-width:575px){
+            left: 24px;
+        }
+    }
+
+    @media(max-width:575px){
+        padding-left: 74px;
     }
 }

@@ -48,7 +48,6 @@ function styles() {
         cascade: false
     }))
     .pipe(sourcemaps.write('.'))
-    .pipe(concat('style.css'))
     .pipe(gulp.dest(paths.styles.dest))
 }
 

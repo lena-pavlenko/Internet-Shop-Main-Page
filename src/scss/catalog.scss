@@ -4,6 +4,10 @@
     
     &__h2{
         margin: 0 0 80px;
+
+        @media(max-width:575px){
+            margin-bottom: 30px;
+        }
     }
 
     &__slider{
@@ -29,6 +33,9 @@
     @media(max-width:991px){
         padding-top: 100px;
         padding-bottom: 100px;
+    }
+    @media(max-width:575px){
+        padding-top: 90px;
     }
 }
 .catalog-slider{
@@ -87,6 +94,10 @@
             object-fit: scale-down;
             height: auto;
             width: 100%;
+
+            @media(max-width:575px){
+                height: 100%;
+            }
         }
     }
 

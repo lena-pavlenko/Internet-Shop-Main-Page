@@ -13,12 +13,15 @@ body{
     @media(max-width:1199px){
         max-width: 960px;
     }
-
     @media(max-width:991px){
         max-width: 760px;
     }
     @media(max-width:768px){
         max-width: 570px;
+    }
+    @media(max-width:576px){
+        max-width: 100%;
+        padding: 0 18px;
     }
 }
 
@@ -141,6 +144,59 @@ body{
     }
 }
 
+.submenu{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.15);    
+    position: absolute;
+    width: 208px;
+    padding: 0;
+    top: auto;
+    z-index: 10;
+    display: none;
+
+    @media(max-width:768px) {
+        display: block;
+        position: initial;
+        box-shadow: none;
+        width: 100%;
+    }
+    
+    &__item{
+        list-style: none;
+        padding: 10px;
+        background: transparent;
+        transition: .4s;
+
+        &:hover{
+            background: $primaryColor;
+        }
+        &:hover a{
+            color: #fff;
+        }
+
+        @media(max-width:768px) {
+            padding: 0;
+        }
+    }
+
+    &__link{
+        font-size: 17px;
+        line-height: 185.5%;
+        color: $secondaryColor;
+        text-decoration: none;
+        transition: .4s;
+
+        @media(max-width:768px) {
+            padding-bottom: 15px;
+            display: block;
+
+            &:last-child{
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
 .main-menu{
     font-family: 'Raleway';
     padding-left: 0;
@@ -194,65 +250,25 @@ body{
         color: $secondaryColor;
         text-decoration: none;
 
+        &.active{
+            color: $primaryColor;
+        }
+
         @media(max-width:768px) {
             font-weight: 400;
+            font-size: 17px;
+            line-height: 135%;
+            color: #4B4844;
+            text-transform: none;
         }
     }
-
     @media(max-width:991px){
         margin: 0;
     }
-}
 
-.submenu{
-    background: #FFFFFF;
-    box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.15);    
-    position: absolute;
-    width: 208px;
-    padding: 0;
-    top: auto;
-    z-index: 10;
-    display: none;
-
-    @media(max-width:768px) {
-        display: block;
-        position: initial;
-        box-shadow: none;
-        width: 100%;
-    }
-    
-    &__item{
-        list-style: none;
-        padding: 10px;
-        background: transparent;
-        transition: .4s;
-
-        &:hover{
-            background: $primaryColor;
-        }
-        &:hover a{
-            color: #fff;
-        }
-
+    &__submenu{
         @media(max-width:768px) {
-            padding: 0;
-        }
-    }
-
-    &__link{
-        font-size: 17px;
-        line-height: 185.5%;
-        color: $secondaryColor;
-        text-decoration: none;
-        transition: .4s;
-
-        @media(max-width:768px) {
-            padding-bottom: 15px;
-            display: block;
-
-            &:last-child{
-                padding-bottom: 0;
-            }
+            padding-top: 3px;
         }
     }
 }
@@ -331,6 +347,10 @@ body{
     &::first-letter{
         color: $primaryColor;
     }
+
+    @media(max-width: 575px){
+        font-size: 25px;
+    }
 }
 .h2{
     font-weight: 700;
@@ -339,6 +359,10 @@ body{
 
     &::first-letter{
         color: $primaryColor;
+    }
+
+    @media(max-width:575px){
+        font-size: 20px;
     }
 }
 
@@ -376,6 +400,10 @@ body{
     font-size: 20px;
     line-height: 125%;
     letter-spacing: 0.1em;
+
+    @media(max-width: 575px){
+        font-size: 16px;
+    }
 }
 
 .text{
@@ -383,6 +411,10 @@ body{
     font-size: 18px;
     line-height: 135%;
     letter-spacing: 0.1em;
+
+    @media(max-width: 575px){
+        font-size: 14px;
+    }
 }
 
 .history-line{
@@ -395,6 +427,10 @@ body{
         font-size: 25px;
         line-height: 127.5%;
         color: $secondaryColor;
+
+        @media(max-width:575px){
+            font-size: 20px;
+        }
     }
 
     &__now{
@@ -402,6 +438,11 @@ body{
         font-size: 144px;
         line-height: 150%;
         color: rgba(52, 52, 52, 0.1);
+
+        @media(max-width:575px){
+            font-size: 111px;
+            margin-top: -100px;
+        }
     }
 }
 
@@ -423,6 +464,9 @@ body{
         @media(max-width:991px){
             left: -98px;
         }
+        @media(max-width:575px){
+            display: none;
+        }
     }
 
     &__uptitle{
@@ -430,6 +474,10 @@ body{
         font-size: 14px;
         line-height: 16px;
         color: $primaryColor;
+
+        @media(max-width:575px){
+            font-size: 10px;
+        }
     }
 
     &__title{
@@ -439,6 +487,11 @@ body{
         text-transform: uppercase;
         color: $secondaryColor;
         margin: 15px 0 20px;
+
+        @media(max-width:575px){
+            font-size: 20px;
+            margin: 10px 0 18px;
+        }
     }
 
     &__inputs{
@@ -468,6 +521,9 @@ body{
 
     @media(max-width:991px){
         padding: 31px 23px 17px;
+    }
+    @media(max-width:575px){
+        padding: 22px 36px 17px;
     }
 }
 
@@ -600,6 +656,23 @@ body{
     margin-bottom: 21px;
 
     @media(max-width:768px){
+        display: block;
+    }
+}
+
+.mob-phone{
+    display: none;
+    filter: brightness(0.1);
+    background: url(../img/tel-mob.svg);
+    width: 21px;
+    height: 21px;
+    background-repeat: no-repeat;
+
+    &:active{
+        filter: brightness(1);
+    }
+
+    @media(max-width:575px){
         display: block;
     }
 }
