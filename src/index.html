@@ -16,9 +16,36 @@
         <div class="container">
             <div class="header__content">
                 <nav class="header__nav">
+                    <button class="menu-close"></button>
                     <ul class="main-menu header__main-menu">
                         <li class="main-menu__item">
                             <a href="#" class="main-menu__link">Каталог</a>
+                            <ul class="main-menu__submenu submenu">
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__link">Диваны</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__link">Кресла</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__link">Стулья</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__link">Кровати</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__link">Матрацы</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__link">Пуфы</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__link">Эксклюзивная мебель</a>
+                                </li>
+                                <li class="submenu__item">
+                                    <a href="#" class="submenu__link">2D-3D модели</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="main-menu__item">
                             <a href="#" class="main-menu__link">Индивидуальная мебель</a>
@@ -36,10 +63,23 @@
                 </a>
                 <div class="header__info">
                     <a href="tel:+79856543221" class="header__phone-link phone-link">+7(985)654-32-21</a>
-                    <div class="lang-block">
+                    <div class="lang-block header__lang-block">
                         <div class="lang-block__field">RU</div>
+                        <div class="lang-block__drop">
+                            <div class="lang-block__drop-item active">
+                                <input type="checkbox" class="lang-block__drop-input" value="RU" name="lang">
+                                RU
+                            </div>
+                            <div class="lang-block__drop-item">
+                                <input type="checkbox" class="lang-block__drop-input" value="EN" name="lang">
+                                EN
+                            </div>
+                        </div>
                     </div>
-                    
+                    <a href="tel:+79856543221" class="mob-phone header__mob-phone"></a>
+                    <div class="mob-burger">
+                        <img src="img/burger.svg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,10 +102,10 @@
                                     <img src="img/slide1.jpg" alt="" srcset="img/slide1_2x.jpg 2x">
                                 </div>
                                 <div class="swiper-slide main-slider__item">
-                                    <img src="img/slide1.jpg" alt="" srcset="img/slide1_2x.jpg 2x">
+                                    <img src="img/slide2.jpg" alt="" srcset="img/slide2_2x.jpg 2x">
                                 </div>
                                 <div class="swiper-slide main-slider__item">
-                                    <img src="img/slide1.jpg" alt="" srcset="img/slide1_2x.jpg 2x">
+                                    <img src="img/slide3.jpg" alt="" srcset="img/slide3_2x.jpg 2x">
                                 </div>
                                 <div class="swiper-slide main-slider__item">
                                     <img src="img/slide1.jpg" alt="" srcset="img/slide1_2x.jpg 2x">
@@ -140,14 +180,286 @@
                     </div>
                     <div class="individ-furnit__info">
                         <h2 class="h2 individ-furnit__h2">Индивидуальная мебель</h2>
-                        <div class="individ-furnit__subtitle">Полный цикл производства.</div>
-                        <div class="individ-furnit__text">Качество мягкой мебели начинается задолго до начала ее производства.</div>
+                        <div class="individ-furnit__subtitle subtitle">Полный цикл производства.</div>
+                        <div class="individ-furnit__text text">Качество мягкой мебели начинается задолго до начала ее производства.</div>
                         <a href="#" class="btn btn--orange individ-furnit__btn"><span>Индивидуальная мебель</span></a>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="history">
+            <div class="container">
+                <h2 class="h2 history__h2">Наша история</h2>
+                <div class="history__flex">
+                    <div class="history__info">
+                        <div class="history__subtitle subtitle">Наработки длинной в 25 лет</div>
+                        <div class="text history__text">Каждый производитель заявляет, что делает все для своих покупателей, но не каждый производитель способен подтвердить свои заявления многолетней историей </div>
+                    </div>
+                    <div class="history__image">
+                        <img src="img/slide1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="history-line history__history-line">
+                    <div class="history-line__point">1993</div>
+                    <div class="history-line__now">25 лет</div>
+                    <div class="history-line__point">2021</div>
+                </div>
+            </div>
+        </section>
+        <section class="recent">
+            <div class="container">
+                <h2 class="h2 recent__h2">Последние публикации</h2>
+                <div class="recent__slider">
+                    <div class="swiper-button-prev slider-btn slider-btn--prev recent__slider-btn--prev"></div>
+                    <div class="swiper-button-next slider-btn slider-btn--next recent__slider-btn--next"></div>
+                    <div class="swiper recent-slider">
+                        <div class="swiper-wrapper recent-slider__swiper-wrapper">
+                            <div class="swiper-slide recent-slider__swiper-slide good-item">
+                                <a href="#" class="good-item__image">
+                                    <img src="img/good1.png" alt="">
+                                </a>
+                                <div class="good-item__info">
+                                    <a href="#" class="good-item__name">Alba</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide recent-slider__swiper-slide good-item">
+                                <a href="#" class="good-item__image">
+                                    <img src="img/good2.png" alt="">
+                                </a>
+                                <div class="good-item__info">
+                                    <a href="#" class="good-item__name">Martin</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide recent-slider__swiper-slide good-item">
+                                <a href="#" class="good-item__image">
+                                    <img src="img/good3-3.png" alt="">
+                                </a>
+                                <div class="good-item__info">
+                                    <a href="#" class="good-item__name">Luara</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide recent-slider__swiper-slide good-item">
+                                <a href="#" class="good-item__image">
+                                    <img src="img/good1.png" alt="">
+                                </a>
+                                <div class="good-item__info">
+                                    <a href="#" class="good-item__name">Alba</a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide recent-slider__swiper-slide good-item">
+                                <a href="#" class="good-item__image">
+                                    <img src="img/good1.png" alt="">
+                                </a>
+                                <div class="good-item__info">
+                                    <a href="#" class="good-item__name">Alba</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="form-section">
+            <div class="container">
+                <div class="form-section__flex">
+                    <div class="form-section__image">
+                        <img src="img/slide1.jpg" alt="">
+                    </div>
+                    <div class="form-block form-section__form-block">
+                        <form method="post" name="form-question" class="form-block__form">
+                            <div class="form-block__uptitle">Заполните форму</div>
+                            <div class="form-block__title">остались вопросы?</div>
+                            <div class="form-block__inputs">
+                                <input type="text" class="input form-block__input" name="user-name" placeholder="Ваше имя*">
+                                <input type="text" class="input form-block__input tel" name="user-phone" placeholder="Ваш номер телефона*">
+                                <textarea placeholder="Комментарий" name="user-mess" class="input form-block__input input--mess"></textarea>
+                            </div>
+                            <div class="check-block form-block__check-block">
+                                <label class="check-block__label">
+                                    <input type="checkbox" class="check-block__input" name="check-policy">
+                                    <span class="check-block__text">Подтверждая заказ, я принимаю условия пользовательского соглашения</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn--orange form-block__btn" name="btn-question"><span>запросить звонок</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pluses">
+            <div class="container">
+                <div class="pluses__grid">
+                    <div class="plus-item">
+                        Осуществляемые компанией «Экми-Мебель» постоянные инвестиции в сертификацию своей продукции, убедительно подтверждают лидерство компании на рынке высококачественной мягкой мебели.
+                    </div>
+                    <div class="plus-item">
+                        Осуществляемые компанией «Экми-Мебель» постоянные инвестиции, убедительно подтверждают лидерство компании на рынке высококачественной мягкой мебели.
+                    </div>
+                    <div class="plus-item">
+                        Осуществляемые компанией «Экми-Мебель» постоянные инвестиции в сертификацию своей продукции, убедительно подтверждают лидерство компании на рынке высококачественной мягкой мебели.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partners">
+            <div class="container">
+                <h2 class="h2 partners__h2">Наши партнеры</h2>
+            </div>
+            <div class="partners__top">
+                <div class="partners__flex">
+                    <div class="partners__grey">
+                        <div class="container partners__container">
+                            <div class="partners__info">
+                                <div class="subtitle partners__subtitle">Компании сотрудничают с нами по всему миру</div>
+                                <div class="text partners__text">
+                                    На данный момент дилерская сеть фабрики «Экми-Мебель» насчитывает более 30 салонов по всей стране. Сейчас мы заинтересованы в расширении сети и предлагаем выгодные условия для сотрудничества. 
+                                    <br><br>
+                                    Основным преимуществом фабрики является изготовление любого индивидуального изделия, мягкой мебели и аксессуаров из наших основных коллекций. Также присутствует линейка оригинальных интерьерных корпусных изделий.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="partners__brown">
+                        <div class="container partners__container">
+                            <div class="partners__image">
+                                <img src="img/slide1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="partners__slider">
+                <div class="container">
+                    <div class="partner-slider swiper">
+                        <div class="swiper-wrapper partner-slider__swiper-wrapper">
+                            <div class="swiper-slide partner-slider__swiper-slide">
+                                <img src="img/vogue-partner.png" alt="">
+                            </div>
+                            <div class="swiper-slide partner-slider__swiper-slide">
+                                <img src="img/apple-logo.png" alt="">
+                            </div>
+                            <div class="swiper-slide partner-slider__swiper-slide">
+                                <img src="img/zara-partner.png" alt="">
+                            </div>
+                            <div class="swiper-slide partner-slider__swiper-slide">
+                                <img src="img/samsunf-partner.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="single-goods">
+            <div class="container">
+                <div class="single-goods__slider">
+                    <div class="single-goods-slider swiper">
+                        <div class="swiper-wrapper single-goods-slider__swiper-wrapper">
+                            <a href="#" class="single-goods-slider__item swiper-slide">
+                                <img src="img/single1.jpg" alt="">
+                            </a>
+                            <a href="#" class="single-goods-slider__item swiper-slide">
+                                <img src="img/single2.jpg" alt="">
+                            </a>
+                            <a href="#" class="single-goods-slider__item swiper-slide">
+                                <img src="img/single3.jpg" alt="">
+                            </a>
+                            <a href="#" class="single-goods-slider__item swiper-slide">
+                                <img src="img/single4.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination slider-pag single-goods__slider-pag"></div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <a href="/" class="footer__logo">
+                    <img src="img/logo-wh.png" alt="">
+                </a>
+                <ul class="footer__menu">
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Каталог</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">о компании</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Индивидуальная мебель</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Партнерам дизайнерам</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">2D, 3D модели</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Шоу-румы</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-link">Дилерам</a>
+                    </li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Контакты</a>
+                    </li>
+                    <li class="footer__menu-item"><a href="#" class="footer__menu-link">Конфигуратор</a>
+                    </li>
+                </ul>
+                <div class="footer__contacts">
+                    <div class="social footer__social">
+                        <a href="#" class="social__link">
+                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.65944 0.956203C5.50484 0.91693 5.77439 0.908203 7.92789 0.908203C10.0814 0.908203 10.3509 0.917658 11.1956 0.956203C12.0403 0.994749 12.6169 1.13075 13.1214 1.32784C13.6497 1.52929 14.1289 1.8442 14.5253 2.25148C14.9289 2.65075 15.2403 3.13366 15.4392 3.66748C15.6352 4.17657 15.7693 4.75839 15.8082 5.60929C15.8471 6.46384 15.8558 6.73584 15.8558 8.9082C15.8558 11.0813 15.8464 11.3533 15.8082 12.2064C15.77 13.0573 15.6352 13.6391 15.4392 14.1482C15.2403 14.6821 14.9284 15.1658 14.5253 15.5657C14.1289 15.9729 13.6497 16.2871 13.1214 16.4878C12.6169 16.6857 12.0403 16.8209 11.1971 16.8602C10.3509 16.8995 10.0814 16.9082 7.92789 16.9082C5.77439 16.9082 5.50484 16.8987 4.65944 16.8602C3.8162 16.8217 3.23962 16.6857 2.73512 16.4878C2.20606 16.2871 1.72671 15.9724 1.33044 15.5657C0.927116 15.1661 0.614999 14.6827 0.415854 14.1489C0.220539 13.6398 0.086486 13.058 0.0475673 12.2071C0.00864859 11.3526 0 11.0806 0 8.9082C0 6.73511 0.00936931 6.46311 0.0475673 5.61075C0.0857653 4.75839 0.220539 4.17657 0.415854 3.66748C0.615293 3.13372 0.927648 2.65025 1.33116 2.25075C1.72687 1.84384 2.20573 1.52889 2.7344 1.32784C3.2389 1.13075 3.81548 0.995476 4.65872 0.956203H4.65944ZM11.1315 2.3962C10.2954 2.35766 10.0446 2.34966 7.92789 2.34966C5.81114 2.34966 5.56033 2.35766 4.7243 2.3962C3.95097 2.43184 3.53151 2.56202 3.25188 2.67184C2.88215 2.81729 2.61764 2.98966 2.34017 3.26966C2.07714 3.52788 1.87471 3.84223 1.74774 4.18966C1.63891 4.47184 1.5099 4.89511 1.47459 5.67548C1.43639 6.51911 1.42846 6.7722 1.42846 8.9082C1.42846 11.0442 1.43639 11.2973 1.47459 12.1409C1.5099 12.9213 1.63891 13.3446 1.74774 13.6267C1.87459 13.9737 2.07711 14.2886 2.34017 14.5467C2.59602 14.8122 2.90809 15.0166 3.25188 15.1446C3.53151 15.2544 3.95097 15.3846 4.7243 15.4202C5.56033 15.4587 5.81042 15.4667 7.92789 15.4667C10.0454 15.4667 10.2954 15.4587 11.1315 15.4202C11.9048 15.3846 12.3243 15.2544 12.6039 15.1446C12.9736 14.9991 13.2381 14.8267 13.5156 14.5467C13.7787 14.2886 13.9812 13.9737 14.108 13.6267C14.2169 13.3446 14.3459 12.9213 14.3812 12.1409C14.4194 11.2973 14.4273 11.0442 14.4273 8.9082C14.4273 6.7722 14.4194 6.51911 14.3812 5.67548C14.3459 4.89511 14.2169 4.47184 14.108 4.18966C13.9639 3.81657 13.7931 3.54966 13.5156 3.26966C13.2597 3.00426 12.9482 2.79999 12.6039 2.67184C12.3243 2.56202 11.9048 2.43184 11.1315 2.3962ZM6.91528 11.3744C7.4808 11.6119 8.1105 11.644 8.69684 11.4651C9.28318 11.2862 9.78978 10.9074 10.1301 10.3935C10.4705 9.87953 10.6234 9.26229 10.5629 8.64719C10.5023 8.03209 10.232 7.45727 9.79815 7.02093C9.52156 6.742 9.18713 6.52843 8.81893 6.39558C8.45073 6.26274 8.05793 6.21392 7.66879 6.25265C7.27965 6.29138 6.90386 6.4167 6.56847 6.61957C6.23309 6.82245 5.94645 7.09784 5.7292 7.42591C5.51194 7.75399 5.36948 8.1266 5.31206 8.5169C5.25463 8.90721 5.28369 9.30551 5.39712 9.68312C5.51055 10.0607 5.70554 10.4083 5.96806 10.7007C6.23057 10.9932 6.55407 11.2232 6.91528 11.3744ZM5.04646 6.00057C5.42486 5.61873 5.87407 5.31584 6.36847 5.10919C6.86287 4.90254 7.39276 4.79618 7.92789 4.79618C8.46302 4.79618 8.99291 4.90254 9.4873 5.10919C9.9817 5.31584 10.4309 5.61873 10.8093 6.00057C11.1877 6.3824 11.4879 6.83571 11.6927 7.3346C11.8974 7.8335 12.0028 8.36821 12.0028 8.9082C12.0028 9.4482 11.8974 9.98291 11.6927 10.4818C11.4879 10.9807 11.1877 11.434 10.8093 11.8158C10.0451 12.587 9.00863 13.0202 7.92789 13.0202C6.84714 13.0202 5.81066 12.587 5.04646 11.8158C4.28226 11.0447 3.85294 9.99878 3.85294 8.9082C3.85294 7.81763 4.28226 6.77172 5.04646 6.00057ZM12.9066 5.40857C13.0004 5.31931 13.0754 5.21197 13.1274 5.09291C13.1793 4.97385 13.207 4.84549 13.2089 4.71543C13.2108 4.58536 13.1868 4.45624 13.1383 4.3357C13.0898 4.21517 13.0179 4.10567 12.9268 4.01369C12.8356 3.92171 12.7271 3.84912 12.6076 3.80022C12.4882 3.75131 12.3602 3.72709 12.2313 3.72899C12.1024 3.73089 11.9752 3.75886 11.8573 3.81126C11.7393 3.86365 11.6329 3.9394 11.5444 4.03402C11.3724 4.21804 11.2782 4.46247 11.2819 4.71543C11.2855 4.96838 11.3867 5.20993 11.564 5.38882C11.7413 5.5677 11.9807 5.66982 12.2313 5.67351C12.482 5.6772 12.7242 5.58216 12.9066 5.40857Z" fill="white"/>
+                            </svg>                                
+                        </a>
+                        <a href="#" class="social__link">
+                            <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.01033 18.9054V10.7094H8.75041L9.1577 7.50037H6.01033V5.45637C6.01033 4.53037 6.266 3.89637 7.58302 3.89637H9.25184V1.03537C8.43987 0.947563 7.6237 0.905165 6.80708 0.908372C4.38511 0.908372 2.72224 2.40037 2.72224 5.13937V7.49437H0V10.7034H2.72818V18.9054H6.01033Z" fill="white"/>
+                            </svg>                                                             
+                        </a>
+                    </div>
+                    <a href="tel:+79856543221" class="single-phone footer__single-phone">+7(985)654-32-21</a>
+                    <button class="btn btn--orange btn-consult footer__btn" type="button">
+                        <span>Персональная консультация</span>
+                        <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.2249 4.26176C15.4201 4.06649 15.4201 3.74991 15.2249 3.55465L12.0429 0.372669C11.8476 0.177407 11.531 0.177407 11.3358 0.372669C11.1405 0.567931 11.1405 0.884514 11.3358 1.07978L14.1642 3.9082L11.3358 6.73663C11.1405 6.93189 11.1405 7.24847 11.3358 7.44374C11.531 7.639 11.8476 7.639 12.0429 7.44374L15.2249 4.26176ZM0.417969 4.4082L14.8713 4.4082V3.4082L0.417969 3.4082L0.417969 4.4082Z" fill="white"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                © 1993–2021 Интернет-магазин «EKMI™» — мебель
+            </div>
+        </div>
+    </footer>
+    <div class="popup">
+        <div class="popup__container">
+            <div class="form-block popup__form-block">
+                <button type="button" class="popup__close">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L27 27M27 1L1 27" stroke="#959595"/>
+                    </svg>
+                </button>
+                <form method="post" name="form-question" class="form-block__form">
+                    <div class="form-block__uptitle">Заполните форму</div>
+                    <div class="form-block__title">остались вопросы?</div>
+                    <div class="form-block__inputs">
+                        <input type="text" class="input form-block__input" name="user-name" placeholder="Ваше имя*">
+                        <input type="text" class="input form-block__input tel" name="user-phone" placeholder="Ваш номер телефона*">
+                        <textarea placeholder="Комментарий" name="user-mess" class="input form-block__input input--mess"></textarea>
+                    </div>
+                    <div class="check-block form-block__check-block">
+                        <label class="check-block__label">
+                            <input type="checkbox" class="check-block__input" name="check-policy">
+                            <span class="check-block__text">Подтверждая заказ, я принимаю условия пользовательского соглашения</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn--orange form-block__btn" name="btn-question"><span>запросить звонок</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>

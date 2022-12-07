@@ -1,0 +1,141 @@
+.footer{
+    background: $bgGreyColor;
+    padding: 77px 0 29px;
+    position: relative;
+    color: #fff;
+
+    &::after{
+        content: '';
+        position: absolute;
+        background: url(../img/ekmi-logo.svg) no-repeat;
+        width: 364px;
+        height: 96px;
+        right: 0;
+        top: -95px;
+
+        @media(max-width:768px){
+            width: 245px;
+            right: 11px;
+            top: -64px;
+            background-size: contain;
+        }
+    }
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+
+        @media(max-width:768px){
+            flex-wrap: wrap;
+        }
+        @media(max-width:575px){
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__logo{
+        max-width: 170px;
+
+        @media(max-width:991px){
+            margin-right: 20px;
+        }
+        @media(max-width:575px){
+            margin-right: 0;
+            order: 3;
+            margin-top: 57px;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__menu{
+        column-count: 2;
+        column-gap: 97px;
+        padding: 0;
+
+        @media(max-width: 991px){
+            column-gap: 22px;
+        }
+        @media(max-width:575px){
+            order: 1;
+            margin: 0;
+        }
+
+        &-item{
+            padding-bottom: 25px;
+            list-style: none;
+            max-width: 145px;
+
+            &:last-child{
+                padding-bottom: 0;
+            }
+
+            @media(max-width:768px){
+                max-width: 155px;
+            }
+        }
+
+        &-link{
+            color: #fff;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 150%;
+            letter-spacing: 0.16em;
+            text-transform: capitalize;
+            text-decoration: none;
+            transition: color ease .4s;
+
+            &:hover{
+                color: $primaryColor;
+            }
+        }
+    }
+
+    &__single-phone{
+        display: block;
+        margin: 32px 0;
+
+        @media(max-width:575px){
+            display: inline-block;
+        }
+    }
+
+    &__social{
+        @media(max-width:575px){
+            display: inline-flex;
+            margin-right: 80px;
+        }
+    }
+
+    &__contacts{
+        @media(max-width:575px){
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            order: 2;
+        }
+    }
+
+    &__bottom{
+        text-align: center;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: 0.16em;
+        text-transform: capitalize;
+        padding-top: 80px;
+
+        @media(max-width:575px){
+            padding-top: 34px;
+        }
+    }
+
+    @media(max-width:575px){
+        padding: 63px 0 27px;
+    }
+}

@@ -1,0 +1,26 @@
+.recent{
+    padding-top: 80px;
+
+    &__slider{
+        position: relative;
+        padding: 0 36px;
+    }
+    
+    &__slider-btn--prev{
+        left: 0;
+    }
+
+    &__slider-btn--next{
+        right: 0;
+    }
+
+    &__h2{
+        @media(max-width:575px){
+            margin-bottom: 30px;
+        }
+    }
+
+    @media(max-width: 991px){
+        padding: 50px 0;
+    }
+}

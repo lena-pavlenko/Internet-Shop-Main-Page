@@ -1,0 +1,125 @@
+.history{
+    padding-top: 86px;
+    padding-bottom: 80px;
+
+    &__h2{
+        margin-bottom: 14px;
+        margin-top: 0;
+    }
+
+    &__flex{
+        position: relative;
+        display: flex;
+
+        @media(max-width:768px){
+            flex-direction: column;
+        }
+        @media(max-width:575px){
+           margin: 0 -18px;
+        }
+    }
+
+    &__info{
+        background: $bgGreyColor;
+        color: #FFFFFF;
+        width: 538px;
+        padding: 50px 41px;
+        height: fit-content;
+        position: absolute;
+        top: 66px;
+        left: 0;
+        z-index: 23;
+
+        @media(max-width:1199px){
+            top: 19px;
+            width: 403px;
+        }
+        @media(max-width:768px){
+            position: inherit;
+        }
+        @media(max-width:575px){
+            width: 100%;
+        }
+
+        &::after{
+            content: '';
+            background: #FF9619;
+            width: 101px;
+            height: 55px;
+            position: absolute;
+            right: 69px;
+            bottom: -28px;
+
+            @media(max-width:768px){
+                z-index: 4;
+            }
+            @media(max-width:575px){
+                width: 52px;
+                height: 46px;
+                right: 0;
+                bottom: -7px;
+            }
+        }
+    }
+
+    &__subtitle{
+        margin-bottom: 25px;
+
+        @media(max-width: 575px){
+            margin-bottom: 10px;
+        }
+    }
+
+    &__image{
+        width: 800px;
+        margin-left: auto;
+        height: 400px;
+        z-index: 3;
+
+        @media(max-width:991px){
+            width: 460px;
+            height: 313px;
+        }
+        @media(max-width:768px){
+            width: 100%;
+        }
+        @media(max-width:575px){
+            height: auto;
+            position: relative;
+            width: 93%;
+            margin: 0 18px;
+
+            &::after{
+                content: '';
+                display: block;
+                padding-top: 75%;
+            }
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            @media(max-width:575px){
+                position: absolute;
+            }
+        }
+    }
+
+    &__history-line{
+        padding-top: 80px;
+
+        @media(max-width:1199px){
+            padding-top: 40px;
+        }
+        @media(max-width:575px){
+            padding-top: 100px;
+        }
+    }
+
+    @media(max-width:991px){
+        padding: 50px 0;
+    }
+    
+}

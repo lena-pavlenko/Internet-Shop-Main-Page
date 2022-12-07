@@ -13,7 +13,7 @@ const paths = {
         dest: 'dist/'
     },
     styles: {
-        src: 'src/css/**/style.scss',
+        src: 'src/scss/**/style.scss',
         dest: 'dist/css/'
     },
     scripts: {
@@ -48,7 +48,6 @@ function styles() {
         cascade: false
     }))
     .pipe(sourcemaps.write('.'))
-    .pipe(concat('style.css'))
     .pipe(gulp.dest(paths.styles.dest))
 }
 
