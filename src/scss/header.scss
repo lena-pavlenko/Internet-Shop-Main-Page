@@ -97,4 +97,9 @@
     line-height: 150%;
     text-transform: uppercase;
     color: $secondaryColor;
+    transition: ease .3s;
+
+    &:hover{
+        text-decoration: none;
+    }
 }

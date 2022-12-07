@@ -35,10 +35,11 @@
         padding: 38px 0;
         color: #fff;
         width: 60%;
-        height: 580px;
+        height: 484px;
 
         @media(max-width: 991px){
             top: 156px;
+            height: 580px;
         }
         @media(max-width:768px){
             width: 100%;
@@ -75,6 +76,11 @@
         height: 397px;
         position: relative;
         margin-left: auto;
+
+        @media(max-width: 1199px){
+            width: 479px;
+            height: 363px;
+        }
 
         @media(max-width: 991px){
             width: 450px;
@@ -189,11 +195,10 @@
 .partner-slider{
     &__swiper-slide{
         max-width: fit-content;
-        margin-right: 80px;
-        filter: drop-shadow(0px 4px 4px rgba(255, 150, 25, 0.15));
 
         @media(max-width:575px){
             margin-right: 0;
+            max-width: none;
         }
 
         img{
@@ -203,8 +208,6 @@
     }
 
     &__swiper-wrapper{
-        @media(max-width:575px){
-            align-items: center;
-        }
+        align-items: center;
     }
 }

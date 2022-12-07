@@ -64,7 +64,11 @@ window.onload = function() {
       },
       576: {
         slidesPerView: 4,
+        spaceBetween: 30,
       },
+      992: {
+        spaceBetween: 80,
+      }
     }
   });
 
@@ -128,6 +132,31 @@ window.onload = function() {
     }
   }
 
+  // Открытие попапа
+  const openPopup = () => {
+    const btn = document.querySelector('.btn-consult');
+    const popup = document.querySelector('.popup');
+
+    if (popup) {
+      btn.addEventListener('click', e => {
+        popup.classList.add('open');
+        setTimeout(() => {
+          popup.style.opacity = '1';
+        }, 150)
+      })
+
+      popup.addEventListener('click', e => {
+        if (e.target.closest('.popup__close') || !e.target.closest('.popup__container')) {
+          setTimeout(() => {
+            popup.classList.remove('open');
+          }, 150)
+          popup.style.opacity = '';
+        }
+      })
+    }
+  }
+
   langSwitch();
   mobMenu();
+  openPopup();
 }

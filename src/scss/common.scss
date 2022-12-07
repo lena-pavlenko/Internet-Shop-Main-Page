@@ -249,8 +249,12 @@ body{
         text-transform: uppercase;
         color: $secondaryColor;
         text-decoration: none;
+        transition: ease .3s;
 
         &.active{
+            color: $primaryColor;
+        }
+        &:hover{
             color: $primaryColor;
         }
 
@@ -674,5 +678,38 @@ body{
 
     @media(max-width:575px){
         display: block;
+    }
+}
+
+.popup{
+    background: rgba(24, 24, 24, 0.7);
+    backdrop-filter: blur(4.5px);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    display: none;
+    opacity: 0;
+    transition: ease-in .5s;
+    z-index: 22;
+
+    &.open{
+        display: flex;
+    }
+
+    &__close{
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: ease .3s;
+        top: 5px;
+        right: 5px;
+        position: absolute;
+
+        &:hover path{
+            stroke: $primaryColor;
+        }
     }
 }

@@ -196,7 +196,7 @@
                         <div class="text history__text">Каждый производитель заявляет, что делает все для своих покупателей, но не каждый производитель способен подтвердить свои заявления многолетней историей </div>
                     </div>
                     <div class="history__image">
-                        <img src="img/slide2.jpg" alt="">
+                        <img src="img/slide1.jpg" alt="">
                     </div>
                 </div>
                 <div class="history-line history__history-line">
@@ -271,8 +271,7 @@
                             <div class="form-block__title">остались вопросы?</div>
                             <div class="form-block__inputs">
                                 <input type="text" class="input form-block__input" name="user-name" placeholder="Ваше имя*">
-                                <input type="text" class="input form-block__input" name="user-phone" placeholder="Ваш номер телефона*">
-                                <input type="text" class="input form-block__input" name="user-country" placeholder="Страна">
+                                <input type="text" class="input form-block__input tel" name="user-phone" placeholder="Ваш номер телефона*">
                                 <textarea placeholder="Комментарий" name="user-mess" class="input form-block__input input--mess"></textarea>
                             </div>
                             <div class="check-block form-block__check-block">
@@ -434,6 +433,33 @@
             </div>
         </div>
     </footer>
+    <div class="popup">
+        <div class="popup__container">
+            <div class="form-block popup__form-block">
+                <button type="button" class="popup__close">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L27 27M27 1L1 27" stroke="#959595"/>
+                    </svg>
+                </button>
+                <form method="post" name="form-question" class="form-block__form">
+                    <div class="form-block__uptitle">Заполните форму</div>
+                    <div class="form-block__title">остались вопросы?</div>
+                    <div class="form-block__inputs">
+                        <input type="text" class="input form-block__input" name="user-name" placeholder="Ваше имя*">
+                        <input type="text" class="input form-block__input tel" name="user-phone" placeholder="Ваш номер телефона*">
+                        <textarea placeholder="Комментарий" name="user-mess" class="input form-block__input input--mess"></textarea>
+                    </div>
+                    <div class="check-block form-block__check-block">
+                        <label class="check-block__label">
+                            <input type="checkbox" class="check-block__input" name="check-policy">
+                            <span class="check-block__text">Подтверждая заказ, я принимаю условия пользовательского соглашения</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn--orange form-block__btn" name="btn-question"><span>запросить звонок</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
