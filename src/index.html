@@ -273,13 +273,13 @@
                             <div class="form-block__uptitle">Заполните форму</div>
                             <div class="form-block__title">остались вопросы?</div>
                             <div class="form-block__inputs">
-                                <input type="text" class="input form-block__input" name="user-name" placeholder="Ваше имя*">
-                                <input type="text" class="input form-block__input tel" name="user-phone" placeholder="Ваш номер телефона*">
+                                <input type="text" class="input input--required form-block__input" name="user-name" placeholder="Ваше имя*">
+                                <input type="text" class="input input--required form-block__input tel" name="user-phone" placeholder="Ваш номер телефона*">
                                 <textarea placeholder="Комментарий" name="user-mess" class="input form-block__input input--mess"></textarea>
                             </div>
                             <div class="check-block form-block__check-block">
                                 <label class="check-block__label">
-                                    <input type="checkbox" class="check-block__input" name="check-policy">
+                                    <input type="checkbox" class="check-block__input input--required" name="check-policy">
                                     <span class="check-block__text">Подтверждая заказ, я принимаю условия пользовательского соглашения</span>
                                 </label>
                             </div>
@@ -437,7 +437,7 @@
                         </a>
                     </div>
                     <a href="tel:+79856543221" class="single-phone footer__single-phone">+7(985)654-32-21</a>
-                    <button class="btn btn--orange btn-consult footer__btn" type="button">
+                    <button class="btn btn--orange btn--popup btn-consult footer__btn" type="button">
                         <span>Персональная консультация</span>
                         <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.2249 4.26176C15.4201 4.06649 15.4201 3.74991 15.2249 3.55465L12.0429 0.372669C11.8476 0.177407 11.531 0.177407 11.3358 0.372669C11.1405 0.567931 11.1405 0.884514 11.3358 1.07978L14.1642 3.9082L11.3358 6.73663C11.1405 6.93189 11.1405 7.24847 11.3358 7.44374C11.531 7.639 11.8476 7.639 12.0429 7.44374L15.2249 4.26176ZM0.417969 4.4082L14.8713 4.4082V3.4082L0.417969 3.4082L0.417969 4.4082Z" fill="white"/>
@@ -450,7 +450,7 @@
             </div>
         </div>
     </footer>
-    <div class="popup">
+    <div class="popup popup--form">
         <div class="popup__container">
             <div class="form-block popup__form-block">
                 <button type="button" class="popup__close">
@@ -462,18 +462,30 @@
                     <div class="form-block__uptitle">Заполните форму</div>
                     <div class="form-block__title">остались вопросы?</div>
                     <div class="form-block__inputs">
-                        <input type="text" class="input form-block__input" name="user-name" placeholder="Ваше имя*">
-                        <input type="text" class="input form-block__input tel" name="user-phone" placeholder="Ваш номер телефона*">
+                        <input type="text" class="input input--required form-block__input" name="user-name" placeholder="Ваше имя*">
+                        <input type="text" class="input input--required form-block__input tel" name="user-phone" placeholder="Ваш номер телефона*">
                         <textarea placeholder="Комментарий" name="user-mess" class="input form-block__input input--mess"></textarea>
                     </div>
                     <div class="check-block form-block__check-block">
                         <label class="check-block__label">
-                            <input type="checkbox" class="check-block__input" name="check-policy">
+                            <input type="checkbox" class="check-block__input input--required" name="check-policy">
                             <span class="check-block__text">Подтверждая заказ, я принимаю условия пользовательского соглашения</span>
                         </label>
                     </div>
                     <button type="submit" class="btn btn--orange form-block__btn" name="btn-question"><span>запросить звонок</span></button>
                 </form>
+            </div>
+        </div>
+    </div>
+    <div class="popup popup--thanks">
+        <div class="popup__container">
+            <div class="thanks-block">
+                <button type="button" class="popup__close">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L27 27M27 1L1 27" stroke="#959595"/>
+                    </svg>
+                </button>
+                <div class="thanks-block__title">Спасибо! <br> Скоро с Вами свяжется наш специалист</div>
             </div>
         </div>
     </div>

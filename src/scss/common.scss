@@ -552,6 +552,12 @@ body{
         height: 23px;
         padding: 0;
     }
+
+    &--required{
+        &.error{
+            border-bottom-color: red;
+        }
+    }
 }
 
 .check-block{
@@ -567,6 +573,10 @@ body{
             height: 20px;
             left: 0;
             position: absolute;
+        }
+
+        &.error::before{
+            border: 1px solid red;
         }
     }
 
@@ -599,6 +609,10 @@ body{
             top: 3px;
             opacity: 0;
             transition: ease .3s;
+        }
+
+        &.error{
+            color: red;
         }
     }
 }
@@ -703,7 +717,7 @@ body{
 
     &.open{
        opacity: 1;
-       z-index: 20;
+       z-index: 99;
     }
 
     &__close{
@@ -731,6 +745,7 @@ body{
     position: fixed;
     bottom: 30px;
     right: 0px;
+    z-index: 50;
     transform: translateX(100%);
     cursor: pointer;
     border: none;
@@ -754,4 +769,14 @@ body{
         transform: translateX(0);
         right: 20px;
     }
+}
+
+.thanks-block{
+    width: 300px;
+    height: auto;
+    background: #fff;
+    padding: 60px 20px 60px;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
 }

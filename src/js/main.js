@@ -134,7 +134,7 @@ window.onload = function() {
 
   // Открытие попапа
   const openPopup = () => {
-    const btn = document.querySelector('.btn-consult');
+    const btn = document.querySelector('.btn--popup');
     const popup = document.querySelector('.popup');
 
     if (popup) {
