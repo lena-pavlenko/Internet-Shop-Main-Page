@@ -12,6 +12,10 @@
 
     &__h2{
         margin-bottom: 80px;
+        
+        @media(min-width: 1199px){
+            transform: translateX(-1000px);
+        }
 
         @media(max-width:575px){
             margin-bottom: 30px;

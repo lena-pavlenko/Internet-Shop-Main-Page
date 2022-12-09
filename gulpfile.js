@@ -27,7 +27,16 @@ const paths = {
     fonts: {
         src: 'src/fonts/*',
         dest: 'dist/fonts'
+    },
+    ico: {
+        src: '*.ico',
+        dest: 'dist/'
     }
+}
+
+function ico() {
+    return gulp.src(paths.ico.src)
+    .pipe(gulp.dest(paths.ico.dest));
 }
 
 function html() {
@@ -77,9 +86,10 @@ function watch() {
     gulp.watch(paths.images.src, img)
     gulp.watch(paths.html.src, html)
     gulp.watch(paths.fonts.src, fonts)
+    gulp.watch(paths.ico.src, ico)
 }
 
-const build = gulp.series(clean, gulp.parallel(html, styles, scripts, img, fonts), watch);
+const build = gulp.series(clean, gulp.parallel(html, styles, scripts, img, fonts, ico), watch);
 
 function clean() {
     return del(['dist'])

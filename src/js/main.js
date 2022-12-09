@@ -134,29 +134,121 @@ window.onload = function() {
 
   // Открытие попапа
   const openPopup = () => {
-    const btn = document.querySelector('.btn-consult');
+    const btn = document.querySelector('.btn--popup');
     const popup = document.querySelector('.popup');
 
     if (popup) {
       btn.addEventListener('click', e => {
         popup.classList.add('open');
-        setTimeout(() => {
-          popup.style.opacity = '1';
-        }, 150)
       })
 
       popup.addEventListener('click', e => {
         if (e.target.closest('.popup__close') || !e.target.closest('.popup__container')) {
-          setTimeout(() => {
-            popup.classList.remove('open');
-          }, 150)
-          popup.style.opacity = '';
+          popup.classList.remove('open');
         }
       })
     }
   }
 
+  // Плавный скролл
+const scrollSmooth = (anchor) => {
+  let dist = document.documentElement.scrollTop + anchor.getBoundingClientRect().top;
+
+  window.scrollTo({
+      top: dist,
+      behavior: "smooth"
+  })
+}
+
+const buttonUp = () => {
+  const btn = document.querySelector('.btn-up');
+  const toMain = document.querySelector('main');
+
+  btn.addEventListener('click', () => {
+    scrollSmooth(toMain);
+  })
+
+  // Скрытие и появление кнопки при скролле
+  window.addEventListener('scroll', function() {
+        
+    if (window.pageYOffset > 300) {
+    btn.classList.add('visible');
+    } else {
+    btn.classList.remove('visible');
+    }
+  });
+}
+
+// Фиксация шапки при скролле
+ScrollTrigger.create({
+  start: 'top 0',
+  end: 99999,
+  toggleClass: {className: 'header--fix', targets: '.header'}
+});
+
+// Анимации
+if (screen.width > 1199){
+  gsap.to('.catalog__h2', {
+    duration: 1,
+    x: '0px',
+    scrollTrigger: {
+      trigger: '.catalog',
+      start: '-=300 ',
+      end: 'top',
+      scrub: 1,
+      once: true,
+    },
+  });
+  gsap.to('.history__h2', {
+    duration: 1,
+    x: '0px',
+    scrollTrigger: {
+      trigger: '.history',
+      start: '-=400',
+      end: '-=400',
+      scrub: 1,
+      once: true,
+    },
+  });
+  gsap.to('.partners__h2', {
+    duration: 1,
+    x: '0px',
+    scrollTrigger: {
+      trigger: '.partners',
+      start: '-=400',
+      end: '-=400',
+      scrub: 1,
+      once: true,
+    },
+  });
+  gsap.to('.recent__h2', {
+    duration: 1,
+    x: '0px',
+    scrollTrigger: {
+      trigger: '.recent',
+      start: '-=400',
+      end: '-=400',
+      scrub: 1,
+      once: true,
+    },
+  });
+  
+  gsap.from('.pluses', {
+    scale: 0,
+    ease: 'none',
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: '.form-section',
+      start: '-=500',
+      end: '+=400',
+      scrub: 1,
+      once: true,
+    },
+  });
+}
+
   langSwitch();
   mobMenu();
   openPopup();
+  buttonUp();
 }

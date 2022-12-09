@@ -159,6 +159,7 @@ body{
         position: initial;
         box-shadow: none;
         width: 100%;
+        padding-left: 5px;
     }
     
     &__item{
@@ -551,6 +552,12 @@ body{
         height: 23px;
         padding: 0;
     }
+
+    &--required{
+        &.error{
+            border-bottom-color: red;
+        }
+    }
 }
 
 .check-block{
@@ -566,6 +573,10 @@ body{
             height: 20px;
             left: 0;
             position: absolute;
+        }
+
+        &.error::before{
+            border: 1px solid red;
         }
     }
 
@@ -599,6 +610,10 @@ body{
             opacity: 0;
             transition: ease .3s;
         }
+
+        &.error{
+            color: red;
+        }
     }
 }
 
@@ -616,6 +631,11 @@ body{
         justify-content: center;
         transition: border ease .4s;
         margin-right: 14px;
+
+        svg{
+            width: 17px;
+            height: 17px;
+        }
 
         &:last-child{
             margin-right: 0;
@@ -690,13 +710,14 @@ body{
     align-items: center;
     justify-content: center;
     top: 0;
-    display: none;
     opacity: 0;
-    transition: ease-in .5s;
-    z-index: 22;
+    z-index: -1;
+    transition: ease-out 0.2s;
+    display: flex;
 
     &.open{
-        display: flex;
+       opacity: 1;
+       z-index: 99;
     }
 
     &__close{
@@ -712,4 +733,50 @@ body{
             stroke: $primaryColor;
         }
     }
+}
+.btn-up{
+    border-radius: 50%;
+    background: $primaryColor;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 30px;
+    right: 0px;
+    z-index: 50;
+    transform: translateX(100%);
+    cursor: pointer;
+    border: none;
+    transition: ease-in .3s;
+
+    &:hover{
+        background: rgb(224 129 16);
+    }
+
+    &::after{
+        content: '';
+        display: block;
+        border: solid #fff;
+        border-width: 0 3px 3px 0;
+        padding: 7px;
+        transform: rotate(-135deg);
+        margin-top: 7px;
+    }
+
+    &.visible{
+        transform: translateX(0);
+        right: 20px;
+    }
+}
+
+.thanks-block{
+    width: 300px;
+    height: auto;
+    background: #fff;
+    padding: 60px 20px 60px;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
 }

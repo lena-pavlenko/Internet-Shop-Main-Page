@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicon32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/apple-icon-180x180.png">  <!-- 180×180 -->
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -270,13 +273,13 @@
                             <div class="form-block__uptitle">Заполните форму</div>
                             <div class="form-block__title">остались вопросы?</div>
                             <div class="form-block__inputs">
-                                <input type="text" class="input form-block__input" name="user-name" placeholder="Ваше имя*">
-                                <input type="text" class="input form-block__input tel" name="user-phone" placeholder="Ваш номер телефона*">
+                                <input type="text" class="input input--required form-block__input" name="user-name" placeholder="Ваше имя*">
+                                <input type="text" class="input input--required form-block__input tel" name="user-phone" placeholder="Ваш номер телефона*">
                                 <textarea placeholder="Комментарий" name="user-mess" class="input form-block__input input--mess"></textarea>
                             </div>
                             <div class="check-block form-block__check-block">
                                 <label class="check-block__label">
-                                    <input type="checkbox" class="check-block__input" name="check-policy">
+                                    <input type="checkbox" class="check-block__input input--required" name="check-policy">
                                     <span class="check-block__text">Подтверждая заказ, я принимаю условия пользовательского соглашения</span>
                                 </label>
                             </div>
@@ -409,18 +412,32 @@
                 <div class="footer__contacts">
                     <div class="social footer__social">
                         <a href="#" class="social__link">
-                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.65944 0.956203C5.50484 0.91693 5.77439 0.908203 7.92789 0.908203C10.0814 0.908203 10.3509 0.917658 11.1956 0.956203C12.0403 0.994749 12.6169 1.13075 13.1214 1.32784C13.6497 1.52929 14.1289 1.8442 14.5253 2.25148C14.9289 2.65075 15.2403 3.13366 15.4392 3.66748C15.6352 4.17657 15.7693 4.75839 15.8082 5.60929C15.8471 6.46384 15.8558 6.73584 15.8558 8.9082C15.8558 11.0813 15.8464 11.3533 15.8082 12.2064C15.77 13.0573 15.6352 13.6391 15.4392 14.1482C15.2403 14.6821 14.9284 15.1658 14.5253 15.5657C14.1289 15.9729 13.6497 16.2871 13.1214 16.4878C12.6169 16.6857 12.0403 16.8209 11.1971 16.8602C10.3509 16.8995 10.0814 16.9082 7.92789 16.9082C5.77439 16.9082 5.50484 16.8987 4.65944 16.8602C3.8162 16.8217 3.23962 16.6857 2.73512 16.4878C2.20606 16.2871 1.72671 15.9724 1.33044 15.5657C0.927116 15.1661 0.614999 14.6827 0.415854 14.1489C0.220539 13.6398 0.086486 13.058 0.0475673 12.2071C0.00864859 11.3526 0 11.0806 0 8.9082C0 6.73511 0.00936931 6.46311 0.0475673 5.61075C0.0857653 4.75839 0.220539 4.17657 0.415854 3.66748C0.615293 3.13372 0.927648 2.65025 1.33116 2.25075C1.72687 1.84384 2.20573 1.52889 2.7344 1.32784C3.2389 1.13075 3.81548 0.995476 4.65872 0.956203H4.65944ZM11.1315 2.3962C10.2954 2.35766 10.0446 2.34966 7.92789 2.34966C5.81114 2.34966 5.56033 2.35766 4.7243 2.3962C3.95097 2.43184 3.53151 2.56202 3.25188 2.67184C2.88215 2.81729 2.61764 2.98966 2.34017 3.26966C2.07714 3.52788 1.87471 3.84223 1.74774 4.18966C1.63891 4.47184 1.5099 4.89511 1.47459 5.67548C1.43639 6.51911 1.42846 6.7722 1.42846 8.9082C1.42846 11.0442 1.43639 11.2973 1.47459 12.1409C1.5099 12.9213 1.63891 13.3446 1.74774 13.6267C1.87459 13.9737 2.07711 14.2886 2.34017 14.5467C2.59602 14.8122 2.90809 15.0166 3.25188 15.1446C3.53151 15.2544 3.95097 15.3846 4.7243 15.4202C5.56033 15.4587 5.81042 15.4667 7.92789 15.4667C10.0454 15.4667 10.2954 15.4587 11.1315 15.4202C11.9048 15.3846 12.3243 15.2544 12.6039 15.1446C12.9736 14.9991 13.2381 14.8267 13.5156 14.5467C13.7787 14.2886 13.9812 13.9737 14.108 13.6267C14.2169 13.3446 14.3459 12.9213 14.3812 12.1409C14.4194 11.2973 14.4273 11.0442 14.4273 8.9082C14.4273 6.7722 14.4194 6.51911 14.3812 5.67548C14.3459 4.89511 14.2169 4.47184 14.108 4.18966C13.9639 3.81657 13.7931 3.54966 13.5156 3.26966C13.2597 3.00426 12.9482 2.79999 12.6039 2.67184C12.3243 2.56202 11.9048 2.43184 11.1315 2.3962ZM6.91528 11.3744C7.4808 11.6119 8.1105 11.644 8.69684 11.4651C9.28318 11.2862 9.78978 10.9074 10.1301 10.3935C10.4705 9.87953 10.6234 9.26229 10.5629 8.64719C10.5023 8.03209 10.232 7.45727 9.79815 7.02093C9.52156 6.742 9.18713 6.52843 8.81893 6.39558C8.45073 6.26274 8.05793 6.21392 7.66879 6.25265C7.27965 6.29138 6.90386 6.4167 6.56847 6.61957C6.23309 6.82245 5.94645 7.09784 5.7292 7.42591C5.51194 7.75399 5.36948 8.1266 5.31206 8.5169C5.25463 8.90721 5.28369 9.30551 5.39712 9.68312C5.51055 10.0607 5.70554 10.4083 5.96806 10.7007C6.23057 10.9932 6.55407 11.2232 6.91528 11.3744ZM5.04646 6.00057C5.42486 5.61873 5.87407 5.31584 6.36847 5.10919C6.86287 4.90254 7.39276 4.79618 7.92789 4.79618C8.46302 4.79618 8.99291 4.90254 9.4873 5.10919C9.9817 5.31584 10.4309 5.61873 10.8093 6.00057C11.1877 6.3824 11.4879 6.83571 11.6927 7.3346C11.8974 7.8335 12.0028 8.36821 12.0028 8.9082C12.0028 9.4482 11.8974 9.98291 11.6927 10.4818C11.4879 10.9807 11.1877 11.434 10.8093 11.8158C10.0451 12.587 9.00863 13.0202 7.92789 13.0202C6.84714 13.0202 5.81066 12.587 5.04646 11.8158C4.28226 11.0447 3.85294 9.99878 3.85294 8.9082C3.85294 7.81763 4.28226 6.77172 5.04646 6.00057ZM12.9066 5.40857C13.0004 5.31931 13.0754 5.21197 13.1274 5.09291C13.1793 4.97385 13.207 4.84549 13.2089 4.71543C13.2108 4.58536 13.1868 4.45624 13.1383 4.3357C13.0898 4.21517 13.0179 4.10567 12.9268 4.01369C12.8356 3.92171 12.7271 3.84912 12.6076 3.80022C12.4882 3.75131 12.3602 3.72709 12.2313 3.72899C12.1024 3.73089 11.9752 3.75886 11.8573 3.81126C11.7393 3.86365 11.6329 3.9394 11.5444 4.03402C11.3724 4.21804 11.2782 4.46247 11.2819 4.71543C11.2855 4.96838 11.3867 5.20993 11.564 5.38882C11.7413 5.5677 11.9807 5.66982 12.2313 5.67351C12.482 5.6772 12.7242 5.58216 12.9066 5.40857Z" fill="white"/>
-                            </svg>                                
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_12_8)">
+                                    <path d="M13.162 18.994C13.771 18.994 14.02 18.588 14.013 18.079C13.982 16.162 14.727 15.13 16.072 16.475C17.56 17.963 17.868 18.994 19.675 18.994H22.875C23.683 18.994 24.001 18.734 24.001 18.326C24.001 17.463 22.58 15.94 21.376 14.822C19.69 13.257 19.611 13.22 21.063 11.336C22.864 8.997 25.22 6 23.136 6H19.155C18.383 6 18.327 6.435 18.052 7.083C17.057 9.43 15.166 12.47 14.448 12.005C13.697 11.52 14.041 9.599 14.098 6.744C14.113 5.99 14.109 5.473 12.957 5.205C12.328 5.06 11.716 5 11.148 5C8.875 5 7.307 5.953 8.198 6.119C9.769 6.412 9.618 9.811 9.252 11.279C8.614 13.835 6.216 9.255 5.217 6.974C4.976 6.426 4.902 6 4.042 6H0.787C0.295 6 0 6.16 0 6.516C0 7.118 2.96 13.236 5.786 16.286C8.542 19.261 11.266 18.994 13.162 18.994V18.994Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_12_8">
+                                        <rect width="24" height="24" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>                      
                         </a>
                         <a href="#" class="social__link">
-                            <svg width="10" height="19" viewBox="0 0 10 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.01033 18.9054V10.7094H8.75041L9.1577 7.50037H6.01033V5.45637C6.01033 4.53037 6.266 3.89637 7.58302 3.89637H9.25184V1.03537C8.43987 0.947563 7.6237 0.905165 6.80708 0.908372C4.38511 0.908372 2.72224 2.40037 2.72224 5.13937V7.49437H0V10.7034H2.72818V18.9054H6.01033Z" fill="white"/>
-                            </svg>                                                             
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_11_6)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.384 22.779C18.706 23.007 19.121 23.064 19.491 22.924C19.861 22.783 20.133 22.467 20.215 22.084C21.084 18 23.192 7.663 23.983 3.948C24.043 3.668 23.943 3.377 23.723 3.19C23.503 3.003 23.198 2.949 22.926 3.05C18.733 4.602 5.82 9.447 0.542001 11.4C0.207001 11.524 -0.0109989 11.846 1.12521e-06 12.199C0.0120011 12.553 0.250001 12.86 0.593001 12.963C2.96 13.671 6.067 14.656 6.067 14.656C6.067 14.656 7.519 19.041 8.276 21.271C8.371 21.551 8.59 21.771 8.879 21.847C9.167 21.922 9.475 21.843 9.69 21.64C10.906 20.492 12.786 18.717 12.786 18.717C12.786 18.717 16.358 21.336 18.384 22.779V22.779ZM7.374 14.102L9.053 19.64L9.426 16.133C9.426 16.133 15.913 10.282 19.611 6.947C19.719 6.849 19.734 6.685 19.644 6.57C19.555 6.455 19.391 6.428 19.268 6.506C14.982 9.243 7.374 14.102 7.374 14.102Z" fill="white"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_11_6">
+                                        <rect width="24" height="24" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>                                                           
                         </a>
                     </div>
                     <a href="tel:+79856543221" class="single-phone footer__single-phone">+7(985)654-32-21</a>
-                    <button class="btn btn--orange btn-consult footer__btn" type="button">
+                    <button class="btn btn--orange btn--popup btn-consult footer__btn" type="button">
                         <span>Персональная консультация</span>
                         <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.2249 4.26176C15.4201 4.06649 15.4201 3.74991 15.2249 3.55465L12.0429 0.372669C11.8476 0.177407 11.531 0.177407 11.3358 0.372669C11.1405 0.567931 11.1405 0.884514 11.3358 1.07978L14.1642 3.9082L11.3358 6.73663C11.1405 6.93189 11.1405 7.24847 11.3358 7.44374C11.531 7.639 11.8476 7.639 12.0429 7.44374L15.2249 4.26176ZM0.417969 4.4082L14.8713 4.4082V3.4082L0.417969 3.4082L0.417969 4.4082Z" fill="white"/>
@@ -433,7 +450,7 @@
             </div>
         </div>
     </footer>
-    <div class="popup">
+    <div class="popup popup--form">
         <div class="popup__container">
             <div class="form-block popup__form-block">
                 <button type="button" class="popup__close">
@@ -445,13 +462,13 @@
                     <div class="form-block__uptitle">Заполните форму</div>
                     <div class="form-block__title">остались вопросы?</div>
                     <div class="form-block__inputs">
-                        <input type="text" class="input form-block__input" name="user-name" placeholder="Ваше имя*">
-                        <input type="text" class="input form-block__input tel" name="user-phone" placeholder="Ваш номер телефона*">
+                        <input type="text" class="input input--required form-block__input" name="user-name" placeholder="Ваше имя*">
+                        <input type="text" class="input input--required form-block__input tel" name="user-phone" placeholder="Ваш номер телефона*">
                         <textarea placeholder="Комментарий" name="user-mess" class="input form-block__input input--mess"></textarea>
                     </div>
                     <div class="check-block form-block__check-block">
                         <label class="check-block__label">
-                            <input type="checkbox" class="check-block__input" name="check-policy">
+                            <input type="checkbox" class="check-block__input input--required" name="check-policy">
                             <span class="check-block__text">Подтверждая заказ, я принимаю условия пользовательского соглашения</span>
                         </label>
                     </div>
@@ -460,7 +477,22 @@
             </div>
         </div>
     </div>
+    <div class="popup popup--thanks">
+        <div class="popup__container">
+            <div class="thanks-block">
+                <button type="button" class="popup__close">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L27 27M27 1L1 27" stroke="#959595"/>
+                    </svg>
+                </button>
+                <div class="thanks-block__title">Спасибо! <br> Скоро с Вами свяжется наш специалист</div>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn-up"></button>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
