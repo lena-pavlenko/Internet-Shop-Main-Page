@@ -159,6 +159,7 @@ body{
         position: initial;
         box-shadow: none;
         width: 100%;
+        padding-left: 5px;
     }
     
     &__item{
@@ -617,6 +618,11 @@ body{
         transition: border ease .4s;
         margin-right: 14px;
 
+        svg{
+            width: 17px;
+            height: 17px;
+        }
+
         &:last-child{
             margin-right: 0;
         }
@@ -690,13 +696,14 @@ body{
     align-items: center;
     justify-content: center;
     top: 0;
-    display: none;
     opacity: 0;
-    transition: ease-in .5s;
-    z-index: 22;
+    z-index: -1;
+    transition: ease-out 0.2s;
+    display: flex;
 
     &.open{
-        display: flex;
+       opacity: 1;
+       z-index: 20;
     }
 
     &__close{
@@ -711,5 +718,40 @@ body{
         &:hover path{
             stroke: $primaryColor;
         }
+    }
+}
+.btn-up{
+    border-radius: 50%;
+    background: $primaryColor;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 30px;
+    right: 0px;
+    transform: translateX(100%);
+    cursor: pointer;
+    border: none;
+    transition: ease-in .3s;
+
+    &:hover{
+        background: rgb(224 129 16);
+    }
+
+    &::after{
+        content: '';
+        display: block;
+        border: solid #fff;
+        border-width: 0 3px 3px 0;
+        padding: 7px;
+        transform: rotate(-135deg);
+        margin-top: 7px;
+    }
+
+    &.visible{
+        transform: translateX(0);
+        right: 20px;
     }
 }
