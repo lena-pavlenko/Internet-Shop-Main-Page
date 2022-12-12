@@ -14,7 +14,7 @@
 ## Input
 || HTML | Styles | Scripts | Images | Fonts |
 |:---|:------:|:-----:|:----:|:-----:|:-----:|
-| **Каталог** | src/ | src/scss/ | src/scripts/ | src/img/ |
+| **Каталог** | src/ | src/scss/ | src/scripts/ | src/img/ | src/fonts/ |
 | **Расширение** | .html | .scss | .js | .jpg, .png| .woff, .woff2, .ttf, .eot|
 
 ## Output
