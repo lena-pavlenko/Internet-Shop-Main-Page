@@ -12,15 +12,15 @@
 - локальный сервер с автоматическим обновлением страницы при изменении файлов
 
 ## Input
-|| HTML | Styles | Scripts | Images |
+|| HTML | Styles | Scripts | Images | Fonts |
 |:---|:------:|:-----:|:----:|:-----:|
 | **Каталог** | src/ | src/scss/ | src/scripts/ | src/img/ |
-| **Расширение** | .html | .scss | .js | .jpg, .png|
+| **Расширение** | .html | .scss | .js | .jpg, .png| .woff, .woff2, .ttf, .eot|
 
 ## Output
-|| HTML | CSS | JavaScript | Images |
+|| HTML | CSS | JavaScript | Images | Fonts |
 |:---|:------:|:-----:|:----:|:-----:|
-| **Путь** | dist/ | dist/css/style.css | dist/js/main.js | dist/img/ |
+| **Путь** | dist/ | dist/css/style.css | dist/js/main.js | dist/img/ | dist/fonts/ |
 
 ## Запуск:  
 1. Скачать все файлы проекта  
