@@ -127,3 +127,36 @@
     }
     
 }
+
+.history-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__point{
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 127.5%;
+        color: $secondaryColor;
+
+        @media(max-width:575px){
+            font-size: 20px;
+        }
+    }
+
+    &__now{
+        font-weight: 600;
+        font-size: 144px;
+        line-height: 150%;
+        color: rgba(52, 52, 52, 0.1);
+
+        @media(max-width:575px){
+            font-size: 78px;
+            margin-top: -100px;
+        }
+
+        @media(max-width:359px){
+            font-size: 58px;
+        }
+    }
+}
