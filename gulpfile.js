@@ -6,6 +6,8 @@ const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
+const browsersync = require('browser-sync').create();
+const cleanCSS = require('gulp-clean-css');
 
 const paths = {
     html: {
@@ -33,7 +35,6 @@ const paths = {
         dest: 'dist/'
     }
 }
-
 function ico() {
     return gulp.src(paths.ico.src)
     .pipe(gulp.dest(paths.ico.dest));
@@ -51,13 +52,17 @@ function fonts() {
 
 function styles() {
     return gulp.src(paths.styles.src)
-    
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
         cascade: false
     }))
+    .pipe(cleanCSS({
+        level: 2
+    }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.styles.dest))
+    .pipe(browsersync.stream())
 }
 
 function scripts() {
@@ -69,6 +74,7 @@ function scripts() {
     .pipe(concat('main.js'))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(paths.scripts.dest))
+    .pipe(browsersync.stream())
 }
 
 // Сжатие изображений
@@ -81,7 +87,13 @@ function img() {
 }
 
 function watch() {
-    gulp.watch(paths.styles.src, styles)
+    browsersync.init({
+        server: {
+            baseDir: "./dist"
+        }
+    })
+    gulp.watch(paths.html.dest).on('change', browsersync.reload)
+    gulp.watch('src/**/*.scss', gulp.parallel(styles))
     gulp.watch(paths.scripts.src, scripts)
     gulp.watch(paths.images.src, img)
     gulp.watch(paths.html.src, html)

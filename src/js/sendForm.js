@@ -85,8 +85,6 @@ const sendForm = (name) => {
                 console.log('Ошибка')
             })
         })
-        
-        
     })
 }
 
