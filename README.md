@@ -14,8 +14,8 @@
 ## Input
 || HTML | Styles | Scripts | Images |
 |:---|:------:|:-----:|:----:|:-----:|
-| **Каталог** | src/ | src/styles/ | src/scripts/ | src/img/ |
-| **Расширение** | .html | .css, .scss | .js | .jpg, .png, .gif |
+| **Каталог** | src/ | src/scss/ | src/scripts/ | src/img/ |
+| **Расширение** | .html | .css, .scss | .js | .jpg, .png|
 
 ## Output
 || HTML | CSS | JavaScript | Images |
