@@ -13,13 +13,13 @@
 
 ## Input
 || HTML | Styles | Scripts | Images | Fonts |
-|:---|:------:|:-----:|:----:|:-----:|
+|:---|:------:|:-----:|:----:|:-----:|:-----:|
 | **Каталог** | src/ | src/scss/ | src/scripts/ | src/img/ |
 | **Расширение** | .html | .scss | .js | .jpg, .png| .woff, .woff2, .ttf, .eot|
 
 ## Output
 || HTML | CSS | JavaScript | Images | Fonts |
-|:---|:------:|:-----:|:----:|:-----:|
+|:---|:------:|:-----:|:----:|:-----:|:-----:|
 | **Путь** | dist/ | dist/css/style.css | dist/js/main.js | dist/img/ | dist/fonts/ |
 
 ## Запуск:  
